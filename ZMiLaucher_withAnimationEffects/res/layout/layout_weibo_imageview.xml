@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <com.ljp.laucher.myview.ScrollZoomImageView  
+        android:id="@+id/imageviewer_multitouchimageview"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent" android:scaleType="matrix"/>
+    
+   
+    <RelativeLayout
+        android:id="@+id/imageviewer_relativelayout_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10px"
+        >
+        <LinearLayout
+            android:id="@+id/imageviewer_linearlayout_return"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"	android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10px"	android:layout_marginBottom="10dip"
+           	android:paddingLeft="20px"
+            android:paddingTop="15px"
+            android:paddingRight="20px"
+            android:paddingBottom="15px"
+            android:background="@drawable/imageviewer_toolbar_background"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/imageviewer_return" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:text="返回"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/imageviewer_linearlayout_save"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"	android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:layout_marginRight="10px"	android:layout_marginBottom="10dip"
+            android:paddingLeft="20px"
+            android:paddingTop="15px"
+            android:paddingRight="20px"
+            android:paddingBottom="15px"
+            android:background="@drawable/imageviewer_toolbar_background"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/imageviewer_save" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:text="保存"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </RelativeLayout>    
+</RelativeLayout>

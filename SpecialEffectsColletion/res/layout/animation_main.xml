@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="wrap_content" android:id="@+id/contactItems"
+	android:paddingBottom="5dip" android:paddingLeft="12dip"
+	android:paddingTop="5dip" android:paddingRight="12dip">
+	<Spinner android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:id="@+id/sprAnim"></Spinner>
+	<Button android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:id="@+id/btn_next"
+		android:text="@string/next"></Button>
+</LinearLayout>

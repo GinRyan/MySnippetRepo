@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@drawable/default_homebg">
+	<RelativeLayout android:layout_width="fill_parent"
+		android:id="@+id/rltoast" android:layout_height="wrap_content"
+		android:background="#22ffffff" android:padding="6dp">
+		<TextView android:id="@+id/toptext" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:gravity="center"
+			android:layout_centerInParent="true" android:textSize="20sp"
+			android:textColor="#494949" android:text="使用小助手" />
+		<ImageButton android:id="@+id/topleftimage"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:background="@drawable/b_back" android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true" />
+	</RelativeLayout>
+	<com.ljp.laucher.myview.GalleryFlow
+		android:id="@+id/bg_gallery" android:layout_below="@+id/rltoast"
+		android:layout_above="@+id/btn_sel" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" />
+	<Button android:id="@+id/btn_sel" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true" android:text="确定" android:background="@drawable/composer_button"
+		android:layout_marginBottom="6dip"	android:textColor="#393939"/>
+</RelativeLayout>

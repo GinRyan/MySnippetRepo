@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list 	
+	xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:id="@+id/flaganim"
+	android:oneshot="false"
+	>
+    <item android:drawable="@drawable/f03" android:duration="100" />
+    <item android:drawable="@drawable/f04" android:duration="100" />
+    <item android:drawable="@drawable/f05" android:duration="100" />
+    <item android:drawable="@drawable/f06" android:duration="100" />
+    <item android:drawable="@drawable/f07" android:duration="100" />
+    <item android:drawable="@drawable/f08" android:duration="100" />
+    <item android:drawable="@drawable/f09" android:duration="100" />
+    <item android:drawable="@drawable/f10" android:duration="100" />	
+</animation-list>

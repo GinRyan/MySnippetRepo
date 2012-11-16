@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"	
+    android:layout_height="wrap_content"	android:background="@drawable/selector_null_to_red">
+
+    <ImageView
+        android:id="@+id/more_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="30dip"/>
+
+    <TextView
+        android:id="@+id/more_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/more_icon"
+        android:text="美女"
+        android:textColor="@drawable/selector_gray_to_white"
+        android:textSize="18dip" />
+
+    <ImageView
+        android:id="@+id/more_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="22dip"
+        android:layout_marginRight="16dip"
+        android:layout_marginTop="22dip"
+        android:background="@drawable/triangle" />
+
+</RelativeLayout>

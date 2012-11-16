@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/weibo_detail"
+    android:layout_width="fill_parent"    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="fill_parent"  android:layout_height="wrap_content"
+        android:background="@null" 	android:paddingBottom="8dip"	android:paddingTop="8dip">
+        <ImageButton
+            android:id="@+id/detail_back"
+            android:layout_width="wrap_content"  android:layout_height="wrap_content"	android:layout_marginLeft="8dip"
+            android:layout_alignParentLeft="true"   android:background="@drawable/b_back"
+            android:clickable="true"   android:focusable="true" />
+        <TextView
+            android:id="@+id/today_title"
+            android:layout_width="wrap_content"    android:layout_height="wrap_content"
+            android:layout_centerInParent="true"   android:layout_toRightOf="@+id/img_back"
+            android:text="慢品幻灯片"  android:textColor="#000"	
+            android:textSize="18sp" >
+        </TextView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"  android:layout_height="wrap_content" >
+        <android.support.v4.view.ViewPager
+            android:id="@+id/detail_viewpager"	android:background="@null"
+            android:layout_width="fill_parent" android:layout_height="fill_parent"
+            android:layout_above="@+id/detail_adview"/>
+        <ProgressBar
+	        android:id="@+id/detail_progress"   style="@style/animStyle"
+	        android:layout_width="23dip"  android:layout_height="23dip"
+	         android:layout_centerInParent="true"  android:layout_above="@+id/detail_adview" />
+	         
+	         	    
+	      <LinearLayout
+            android:id="@+id/detail_adview"
+            android:layout_width="fill_parent"  android:layout_height="wrap_content"
+            android:layout_above="@+id/detail_linearlayout_bottom" >
+            
+            </LinearLayout>
+        <LinearLayout
+            android:id="@+id/detail_linearlayout_bottom"
+            android:layout_width="fill_parent"  android:layout_height="wrap_content"	android:paddingBottom="8dip"	android:paddingTop="8dip"
+            android:layout_alignParentBottom="true"  android:background="#55ffffff" >
+            <LinearLayout
+                android:id="@+id/d_refresh"
+                android:layout_width="fill_parent"   android:layout_height="fill_parent"
+                android:layout_weight="1"  android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"  android:layout_height="wrap_content"
+                    android:background="@drawable/b_refresh" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/d_comment"
+                android:layout_width="fill_parent"  android:layout_height="fill_parent"
+                android:layout_weight="1"    android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"  android:layout_height="wrap_content"
+                    android:background="@drawable/b_comment" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/d_forward"
+                android:layout_width="fill_parent"    android:layout_height="fill_parent"
+                android:layout_weight="1"   android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"  android:layout_height="wrap_content"
+                    android:background="@drawable/b_forward" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/d_collect"
+                android:layout_width="fill_parent"   android:layout_height="fill_parent"
+                android:layout_weight="1"    android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"  android:layout_height="wrap_content"
+                    android:background="@drawable/b_fav" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/d_more"
+                android:layout_width="fill_parent"   android:layout_height="fill_parent"
+                android:layout_weight="1"  android:gravity="center"
+                android:orientation="vertical" >
+                <ImageView
+                    android:layout_width="wrap_content"   android:layout_height="wrap_content"
+                    android:background="@drawable/b_next" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff" >
+
+    <RelativeLayout
+        android:id="@+id/more_titile"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip" >
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="60dip"	android:background="@drawable/selector_blue_to_red"
+            android:layout_height="50dip"	android:text="＜"	android:textColor="#fff"	android:textSize="20dip"
+            android:layout_alignParentLeft="true"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_marginLeft="1dip"
+            android:layout_marginRight="1dip"
+            android:layout_toLeftOf="@+id/btn_ok"
+            android:layout_toRightOf="@+id/btn_back"
+            android:background="#0EA6EE"
+            android:text="AddChoice"	android:gravity="center"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="60dip"	android:background="@drawable/selector_blue_to_red"
+            android:layout_height="50dip"	android:text="√"	android:textColor="#fff"	android:textSize="20dip"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/more_titile"
+        android:background="@null" >
+        <ListView
+            android:id="@+id/additem_list"
+            android:layout_width="fill_parent"	android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="#00000000"
+            android:divider="#d3d3d3"
+            android:dividerHeight="1dip" />
+        <ListView
+            android:id="@+id/additem_list_content"	
+            android:layout_width="fill_parent"	android:layout_centerVertical="true"
+            android:layout_height="wrap_content"	android:visibility="gone"
+            android:cacheColorHint="#00000000"
+            android:divider="#d3d3d3"
+            android:dividerHeight="1dip" />
+    </RelativeLayout>
+
+</RelativeLayout>

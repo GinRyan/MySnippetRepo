@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"  
+     android:id="@+id/ScrollView" android:layout_width="fill_parent"  
+     android:layout_height="wrap_content" android:scrollbars="vertical"
+     android:layout_weight="1">   
+	<LinearLayout
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/rootId">
+	    
+	    <FrameLayout android:layout_width="fill_parent"
+		    	android:layout_height="35dp">
+		    <ImageView android:layout_width="fill_parent"
+		    	android:layout_height="fill_parent"
+		    	android:id="@+id/umengBannerTop">
+		    </ImageView>
+		    <RelativeLayout android:layout_width="fill_parent"
+		    	android:layout_height="fill_parent">
+			    <TextView android:id="@+id/feedback_umeng_title"
+			    	android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_centerHorizontal="true"
+				    android:layout_marginTop="4dp"
+				    android:text="友盟反馈"
+				    android:textColor="#BCBCBC"
+				    android:textSize="21dp">
+			    </TextView>
+		    </RelativeLayout>
+	    </FrameLayout>
+	    
+	    <LinearLayout android:orientation="vertical"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:paddingLeft="10dp"
+		    android:paddingRight="10dp"
+		    android:id="@+id/rootId">
+	    
+		    <TextView android:id="@+id/feedback_title"
+		    	android:layout_width="fill_parent" 
+			    android:layout_height="wrap_content" 
+			    android:textSize="19dp"
+			   	android:textColor="#706F6D"
+			    android:layout_marginTop="10dp"
+			    android:layout_marginBottom="10dp"
+			    android:text="欢迎您提出宝贵的意见和建议，您留下的每个字都将用来改善我们的服务。">
+		    </TextView>
+		    
+		     <RelativeLayout android:layout_width="fill_parent"
+		     	android:layout_height="fill_parent">
+			     <EditText android:id="@+id/feedback_content"
+		         android:layout_width="fill_parent"
+		         android:layout_height="250dp"
+		         android:maxEms="10"
+		         android:minEms="10" 
+		         android:hint="请输入您的反馈意见（字数500以内）"
+		         android:gravity="top"/>
+		     </RelativeLayout>
+			     
+		    <LinearLayout android:orientation="horizontal" 
+		    	android:layout_width="fill_parent"
+		    	android:layout_height="wrap_content"
+		    	android:layout_marginTop="10dp" >
+		    	
+		    	<Spinner android:id="@+id/feedback_age_spinner"
+			        android:layout_width="wrap_content"
+			        android:layout_height="50dp" 
+			        android:layout_weight="1"/>
+		    	
+		    	<Spinner android:id="@+id/feedback_gender_spinner"
+			        android:layout_width="wrap_content"
+			        android:layout_height="50dp"
+			        android:layout_weight="1"/>
+		    	
+			</LinearLayout>
+			
+			<Button android:id="@+id/feedback_submit" 
+				android:layout_width="fill_parent"
+				android:layout_height="50dp"
+				android:text="提交反馈"
+				android:textSize="19dp"
+				android:layout_gravity="center_horizontal"
+				android:layout_marginTop="10dp">
+			</Button>
+		</LinearLayout>
+	</LinearLayout>
+</ScrollView> 

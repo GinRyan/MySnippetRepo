@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ljp.laucher.myview.MyPullToRefreshListView
+    android:orientation="vertical" 
+    android:id="@+id/container" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+  	xmlns:android="http://schemas.android.com/apk/res/android"
+  	android:cacheColorHint="@null"    	android:background="@null"
+  >
+    <RelativeLayout 
+        			android:id="@+id/refresh_view" 	android:background="@null"
+        			android:layout_width="50dip" 
+        			android:layout_height="50dip">
+        <ProgressBar android:id="@+id/pull_to_refresh_progress" 
+            		android:visibility="gone" 
+            		android:layout_width="23dip" 
+            		android:layout_height="23dip" 
+            		android:layout_marginLeft="30.0dip" 
+            		android:layout_marginRight="20.0dip" 
+            		android:layout_marginBottom="15.0dip" 
+            		android:indeterminate="true" 
+            		
+            		android:layout_alignParentBottom="true" 
+            		 style="@style/animStyle" />
+        <ImageView android:gravity="bottom" 
+            	   android:id="@+id/pull_to_refresh_image" 
+            	   android:paddingBottom="5.0dip" 
+            	   android:layout_width="wrap_content" 
+            	   android:layout_height="wrap_content" 
+            	   android:layout_marginLeft="30.0dip" 
+            	   android:layout_marginRight="20.0dip" 
+            	   android:layout_alignParentBottom="true"
+            	    />
+ 
+        <TextView android:textAppearance="?android:textAppearanceSmall" 
+                  android:textStyle="bold" 
+                  android:id="@+id/pull_to_refresh_text" 
+                  android:layout_width="fill_parent" 
+                  android:layout_height="wrap_content" 
+                   android:gravity="center"  android:paddingTop="10.0dip" 
+                   android:layout_above="@+id/pull_to_refresh_time"
+                  />
+        <TextView android:textAppearance="?android:textAppearanceSmall" 
+                  android:textStyle="bold" 
+                  android:id="@+id/pull_to_refresh_time"              
+                  android:layout_width="fill_parent" 
+                  android:layout_height="wrap_content" 
+                  android:gravity="bottom|center" 
+                   android:paddingBottom="10.0dip" 
+                   android:layout_alignParentBottom="true" 
+                 />
+    </RelativeLayout>
+    <ListView android:id="@+id/lv_weibo" 
+              android:layout_width="fill_parent" 
+              android:layout_height="fill_parent" 
+              android:cacheColorHint="@null"	
+              android:focusable="false"
+			  android:fadingEdge="none"/>
+</com.ljp.laucher.myview.MyPullToRefreshListView>
