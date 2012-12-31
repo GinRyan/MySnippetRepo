@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:state_enabled="true" android:state_checked="false"  android:drawable="@drawable/up">
+        <shape>
+			<gradient
+		        android:angle="180"
+		        android:endColor="#FFCCCCCC"
+		        android:startColor="@android:color/white" />
+		    <stroke
+		        android:width="1px"
+		        android:color="@color/gray" />
+		    <solid android:color="@android:color/white" />
+		    <corners android:topLeftRadius="6dip"
+		        android:bottomRightRadius="6dip"/>
+   		</shape> 
+    </item>
+        
+	<item android:state_enabled="false" android:state_checked="false" android:drawable="@drawable/up"/>
+</selector>

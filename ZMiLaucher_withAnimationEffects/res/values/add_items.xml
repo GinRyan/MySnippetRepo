@@ -1,0 +1,22 @@
+<resources>
+
+    <string-array name="items">
+
+　　                <item>应用邦</item>
+　　                <item>推荐应用</item>
+　　                <item>国内新闻</item>
+　　                <item>娱乐八卦</item>
+　　                <item>财经网</item>
+　　                <item>情爱频道</item>
+　　                <item>国际新闻</item>
+　　                <item>读览精华</item>
+　　                <item>南方周报</item>
+　　                <item>体育资讯</item>
+    
+    　　                <item>休息片刻</item>
+　　                <item>科技频道</item>
+　　                <item>今日头条</item>
+　　                <item>微博广场</item>
+　　    </string-array>
+
+</resources>

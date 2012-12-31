@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btn_play"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="上传并播放" >
+    </Button>
+
+    <Button
+        android:id="@+id/btn_stop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="停止" >
+    </Button>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="播放进度:" />
+
+    <TextView
+        android:id="@+id/time_per"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="--:--  --%" />
+
+</LinearLayout>

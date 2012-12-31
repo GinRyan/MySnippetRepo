@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_medium"
+        android:text="使用前请确定已经将系统ROOT，设置ADB映射调试端口："
+        tools:context=".MainActivity" />
+
+    <EditText
+        android:id="@+id/port"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_medium"
+        android:text="5555" />
+
+    <Button
+        android:id="@+id/settcp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="设置WIFI调试" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="设置恢复USB调试" />
+
+    <TextView
+        android:id="@+id/tip1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="您现在可以在adb目录下运行该命令来调试：" />
+
+    <TextView
+        android:id="@+id/ip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:textSize="26sp"
+        android:textColor="#Ef56D2"
+        android:text="Welcome!" />
+
+</LinearLayout>

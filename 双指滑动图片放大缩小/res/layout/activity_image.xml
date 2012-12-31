@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:orientation="vertical">
+		  <RelativeLayout
+		  android:layout_width="fill_parent"
+		  android:layout_height="41dip">
+		  
+		  <TextView
+		  android:layout_width="wrap_content"
+		  android:layout_height="wrap_content"
+		  android:layout_centerInParent="true"
+		  android:textSize="20sp"
+		  android:text="浏览图片"
+		  android:textColor="#ffffff">
+		  </TextView>
+		  
+		  <Button
+		  android:id="@+id/downBtn"
+		  android:layout_width="wrap_content"
+		  android:layout_height="wrap_content"
+		  android:layout_alignParentRight="true"
+		  android:text="下载">
+		  </Button>
+		  
+		  </RelativeLayout>
+		  
+		  <RelativeLayout
+		  android:layout_width="fill_parent"
+		  android:layout_height="fill_parent">
+		  <whu.iss.activity.ImageZoomView
+		    android:id="@+id/zoomView"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="fill_parent">
+		  </whu.iss.activity.ImageZoomView>
+		 <ProgressBar 
+		 			android:id="@+id/progress_large"
+		 			android:layout_height="wrap_content"
+		 			android:layout_width="wrap_content"
+		 			style="?android:attr/progressBarStyleLarge"
+		 			android:visibility="gone"
+		 			android:layout_centerInParent="true"/>
+		  <ZoomControls
+		  android:id="@+id/zoomCtrl"
+		  android:layout_width="wrap_content"
+		  android:layout_height="wrap_content"
+		  android:layout_alignParentBottom="true"
+		  android:layout_centerHorizontal="true">
+		  </ZoomControls>
+		  </RelativeLayout>
+</LinearLayout> 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"	android:background="@null"
+	android:layout_height="wrap_content">
+ <TextView 
+  	android:id="@+id/p_list_user"
+  	android:layout_width="wrap_content"	android:layout_height="wrap_content"
+  		android:text="作者" 	android:padding="8dip"
+  	android:textSize="12sp"	android:textColor="#0075a9"/>
+ <TextView 
+  	android:id="@+id/p_list_time" 	android:padding="8dip"
+  	android:layout_width="wrap_content"	android:layout_height="wrap_content"
+  	android:layout_alignParentRight="true"	android:text="时间"
+  	android:textSize="12sp"	android:textColor="#0075a9"/>
+  <TextView 
+  	android:id="@+id/p_list_text" 	android:paddingLeft="8dip" 	android:paddingBottom="8dip"
+  	android:layout_width="fill_parent"	android:layout_height="wrap_content"
+  	android:layout_below="@+id/p_list_user"	android:text="内容"	android:focusable="false"
+  	android:textSize="15sp"	android:textColor="#c9c9c9"/>
+  <View android:layout_width="fill_parent" android:layout_height="1px"  android:background="#99c9c9c9"
+	    android:layout_alignParentBottom="true"></View>
+</RelativeLayout>

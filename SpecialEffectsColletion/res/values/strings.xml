@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, SpecialEffectsActivity!</string>
+    <string name="app_name">SpecialEffects</string>
+	<string name="choose_city">Please select the city</string>
+	
+	<string name="contact_title">iaiai - Contact</string>
+	
+	<string name="text1">IAIAI 测试</string>
+	<string name="text2">测试跳转效果</string>
+	<string name="next">下一页</string>
+	
+	<string name="detail_process_name">进程名称</string>
+	<string name="kill_process">强制结束</string>
+	<string name="detail_process_copyright">版权信息</string>
+	<string name="detail_process_install_dir">安装目录</string>
+	<string name="detail_process_data_dir">数据目录</string>
+	<string name="detail_process_package_size">文件大小</string>
+	<string name="detail_process_permission">操作权限</string>
+	<string name="detail_process_service">服务信息</string>
+	<string name="detail_process_activity">活动信息</string>
+	
+    <string name="silde">切换</string>
+	<string name="sec">第2个Activity</string>
+	<string name="setting">设置</string>
+	<string name="text">This chapter introduced the Android platform and briefly touched on market positioning,
+including what Android is up against in the rapidly changing mobile marketplace.
+Inside two short years, the Android SDK has been announced, released, and
+updated no fewer than four times. And that’s just the software. Major device manufacturers
+have now signed on to the Android platform and have brought capable devices
+to market, including a privately labeled device from Google itself. Android’s future
+continues to brighten.
+In this chapter, we examined the Android stack and discussed its relationship with
+Linux and Java. With Linux at its core, Android is a formidable platform, especially
+for the mobile space where it’s initially targeted. Although Android development is
+done in the Java programming language, the runtime is executed in the Dalvik VM, as
+an alternative to the Java VM from Oracle. Regardless of the VM, Java coding skills are
+an important aspect of Android development.
+We also examined the Android SDK’s Intent class. The Intent is what makes
+Android tick. It’s responsible for how events flow and which code handles them. It
+provides a mechanism for delivering specific functionality to the platform, enabling
+third-party developers to deliver innovative solutions and products for Android. We
+introduced all the main application classes of Activity, Service, ContentProvider,
+and BroadcastReceiver, with a simple code snippet example for each. Each of these
+application classes use Intents in a slightly different manner, but the core facility of
+using Intents to control application behavior enables the innovative and flexible
+Android environment. Intents and their relationship with these application classes
+will be unpacked and unlocked as we progress through this book.
+The AndroidManifest.xml descriptor file ties all the details together for an
+Android application. It includes all the information necessary for the application to
+run, what Intents it can handle, and what permissions the application requires.
+Throughout this book, the AndroidManifest.xml file will be a familiar companion as
+we add and explain new elements.
+Finally, this chapter provided a taste of Android application development with a
+simple example tying a simple UI, an Intent, and Google Maps into one seamless and
+useful experience. This example is, of course, just scratching the surface of what
+Android can do. The next chapter takes a deeper look into the Android SDK so that
+you can learn more about the toolbox we’ll use to unlock Android.
+		</string>
+</resources>

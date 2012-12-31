@@ -1,0 +1,18 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@null" />
+
+    <com.example.listsildedel.SideBar
+        android:id="@+id/sideBar"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical" />
+
+</FrameLayout>

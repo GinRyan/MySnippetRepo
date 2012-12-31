@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ /**
+ *  Copyright (C) 2010 ideasandroid
+ *  欢迎访问http://www.ideasandroid.com
+ *  让程序开发不再那么神秘
+ */ 
+ -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+	android:shape="rectangle">
+	<gradient android:startColor="#509245" android:centerColor="#3e8532"
+		android:endColor="#509245" android:type="linear" android:angle="90"
+		android:centerX="0.5" android:centerY="0.5" />
+	<padding android:left="7dp" android:top="7dp" android:right="7dp"
+		android:bottom="7dp" />
+	<corners android:radius="4dp" />
+</shape>

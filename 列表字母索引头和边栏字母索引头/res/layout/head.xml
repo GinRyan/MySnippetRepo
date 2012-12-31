@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/search_bar_bg"
+    android:gravity="center" >
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_bar_edit_bg"
+        android:drawableLeft="@drawable/search_bar_icon_normal"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="搜索"
+        android:singleLine="true"
+        android:textColor="#000" >
+    </EditText>
+
+</LinearLayout>
