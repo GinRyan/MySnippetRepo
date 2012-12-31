@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:background="#00FFFFFF"
+	android:layout_height="fill_parent"	android:padding="20dip">
+	  <ProgressBar
+            android:id="@+id/pic_more_loading"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_centerInParent="true"
+            android:layout_above="@+id/pic_more"
+            android:max="100" />
+	<Button android:id="@+id/pic_more" android:layout_width="wrap_content"	android:layout_margin="10dip"
+		android:layout_height="wrap_content" android:layout_centerInParent="true"
+		android:scaleType="fitCenter" android:text="更多精彩（下载）\n消耗20积分"/>
+</RelativeLayout>

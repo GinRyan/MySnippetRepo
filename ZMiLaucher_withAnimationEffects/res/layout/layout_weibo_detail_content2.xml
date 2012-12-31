@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@null" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="12dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="8dip" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dip"
+                android:background="@drawable/icon_quote" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/detail_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dip"
+                    android:autoLink="web|phone|email"
+                    android:text="内容"
+                    android:textColor="#000"
+                    android:textColorLink="#0082CB"
+                    android:textSize="18dip" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/detail_content"
+                    android:layout_marginTop="13dip"
+                    android:text="名字"
+                    android:textColor="#6565e5"
+                    android:textSize="15sp" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/detail_ptime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/detail_content"
+                    android:layout_marginTop="14dip"
+                    android:layout_toRightOf="@+id/user_name"
+                    android:text="发表时间："
+                    android:textColor="#a9a9a9"
+                    android:textSize="14dip" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_marginBottom="8dip"
+            android:layout_marginTop="8dip"
+            android:background="#d2d2d2" >
+        </View>
+
+        <ImageView
+            android:id="@+id/detail_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="4dp"
+            android:paddingBottom="24dip"
+            android:paddingLeft="4dip"
+            android:paddingRight="4dip"
+            android:paddingTop="4dip" />
+
+        <Button
+            android:id="@+id/detail_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/t_load"
+            android:text="下载图片"
+            android:textColor="#72e585"
+            android:textSize="12dip"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/image_loading"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"	android:layout_marginLeft="45dip"	android:layout_marginRight="45dip"
+            android:layout_height="wrap_content"	android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            android:max="100" />
+    </LinearLayout>
+
+</ScrollView>

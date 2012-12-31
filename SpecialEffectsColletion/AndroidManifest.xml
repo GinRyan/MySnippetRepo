@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="hong.specialEffects"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>  
+	
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        
+        <activity
+            android:name=".ui.PlasmaActivity"
+            android:label=".ui.PlasmaActivity" >
+        </activity>
+        <activity
+            android:name=".ui.BookpageActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".ui.CoverFlowActivity"
+            android:label=".ui.CoverFlowActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.CustonActivity"
+            android:label=".ui.CustonActivity" >
+        </activity>
+        <activity
+            android:name=".ui.WheelActivity"
+            android:label=".ui.WheelActivity" >
+        </activity>
+        <activity
+            android:name=".ui.Animation_BeginActivity"
+            android:label=".ui.Animation_BeginActivity" >
+        </activity>
+        <activity
+            android:name=".ui.Animation_TargetActivity"
+            android:label=".ui.Animation_TargetActivity" >
+        </activity>
+        <activity
+            android:name=".ui.DrawerActivity"
+            android:label=".ui.DrawerActivity" >
+        </activity>
+        <activity
+            android:name=".ui.HeaderBottomListActivity"
+            android:label=".ui.HeaderBottomListActivity" >
+        </activity>
+         <activity
+            android:name=".ui.SplashScreen_BeginActivity"
+            android:label=".ui.SplashScreen_BeginActivity" >
+        </activity>
+        <activity
+            android:name=".ui.SplashScreen_TargetActivity"
+            android:label=".ui.SplashScreen_TargetActivity" >
+        </activity>
+        <activity
+            android:name=".ui.FlingGalleryActivity"
+            android:label=".ui.FlingGalleryActivity" >
+        </activity>
+        <activity
+            android:name=".ui.SlideSecondActivity"
+            android:label=".ui.SlideSecondActivity" >
+        </activity>
+        <activity
+            android:name=".ui.LeftRightSlideActivity"
+            android:label=".ui.LeftRightSlideActivity" >
+        </activity>
+        <activity
+            android:name=".ui.MuiltTableActivity"
+            android:label=".ui.MuiltTableActivity" >
+        </activity>
+        <activity
+            android:name=".ui.CustomSpinnerActivity"
+            android:label=".ui.CustomSpinnerActivity" >
+        </activity>
+        <activity
+            android:name=".ui.MuiltGradeListActivity"
+            android:label=".ui.MuiltGradeListActivity" >
+        </activity>
+        <activity
+            android:name=".ui.CustomRadioButtonActivity"
+            android:label=".ui.CustomRadioButtonActivity" >
+        </activity>
+        <activity
+            android:name=".ui.CircleCornerActivity"
+            android:label=".ui.CircleCornerActivity" >
+        </activity>
+        <activity
+            android:name=".ui.RoundCornerActivity"
+            android:label=".ui.RoundCornerActivity" >
+        </activity>
+        <activity
+            android:name=".ui.HorListviewActivity"
+            android:label=".ui.HorListviewActivity" >
+        </activity>
+        <activity
+            android:name=".ui.HorizontalListViewActivity"
+            android:label=".ui.HorizontalListViewActivity" >
+        </activity>
+        
+    </application>
+
+</manifest>

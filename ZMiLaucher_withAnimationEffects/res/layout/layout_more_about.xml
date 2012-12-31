@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/default_homebg" >
+
+    <RelativeLayout
+        android:id="@+id/rltoast"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#22ffffff" >
+
+        <TextView
+            android:id="@+id/toptext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="关于&amp;声明"
+            android:textColor="#494949"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/topleftimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/b_back" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="40dip"
+        android:background="#333"
+        android:padding="10dip"
+        android:text="1.具体页面支持左右滑动哦..\n\n2.首页item可拖动，摇一摇可以进行排序\n\n声明：本应用使用的图片多数来自网上，若侵犯了您的版权，请Q451360508-小赖，将立即为您修改，谢谢"
+        android:textColor="#c9c9c9" />
+
+</RelativeLayout>

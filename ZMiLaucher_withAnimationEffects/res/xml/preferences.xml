@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+ <PreferenceCategory android:title="退出应用" >
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="checkbox_clearimage"
+        android:summaryOff="功能: 关闭"
+        android:summaryOn="功能: 开启"
+        android:title="清空下载的图片文件" />
+     <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="checkbox_clearweibo"
+        android:summaryOff="功能: 关闭"
+        android:summaryOn="功能: 开启"
+        android:title="清空下载的微博内容" />
+</PreferenceCategory>
+    <PreferenceCategory android:title="详细页面" >
+	     <CheckBoxPreference
+	        android:defaultValue="true"
+	        android:key="checkbox_filterweibo"
+	        android:summaryOff="功能: 关闭"
+	        android:summaryOn="功能: 开启"
+	        android:title="过滤转发的微博" />
+        <ListPreference
+            android:dialogTitle="选择环境"
+            android:entries="@array/entries_list_preference"
+            android:entryValues="@array/entriesvalue_list_preference"
+            android:defaultValue="1"
+            android:key="isload_pic"
+            android:title="图片下载方式" />
+            
+	<PreferenceScreen 
+		android:title="微博帐号设置"	android:key="userset">
+	        <intent android:action="android.intent.action.MAIN"
+	            android:targetPackage="com.ljp.laucher"
+	            android:targetClass="com.ljp.laucher.usercenter.UserCenterActivity">
+	        </intent>
+	</PreferenceScreen>
+    </PreferenceCategory>
+
+
+    <PreferenceCategory android:title="离线下载（下个版本使用）" >
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="checkbox_openservice"
+            android:summaryOff="功能: 关闭"
+            android:summaryOn="功能: 开启"
+            android:title="是否开启离线下载" />
+
+        <EditTextPreference
+            android:defaultValue="一日一美女"
+            android:dependency="checkbox_openservice"
+            android:dialogTitle="请输入频道"
+            android:key="edit_servicetime"
+            android:numeric="integer"
+            android:summary="需要离线的频道"
+            android:title="下载频道设置" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:dependency="checkbox_openservice"
+            android:key="checkbox_openservicemove"
+            android:summaryOff="功能: 关闭"
+            android:summaryOn="功能: 开启"
+            android:title="是否开启震动" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

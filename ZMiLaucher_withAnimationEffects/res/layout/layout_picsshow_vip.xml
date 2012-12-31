@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relate"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/default_homebg" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pic_viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#00ffffff">
+
+        <ImageButton
+            android:id="@+id/pic_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"	android:layout_margin="8dip"
+            android:layout_alignParentLeft="true"	android:focusable="true"
+            android:background="@drawable/b_back" />
+
+        <TextView
+            android:id="@+id/pic_title"
+            android:layout_width="wrap_content"	android:padding="12dip"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/img_back"
+            android:text="精品幻灯片"
+            android:textColor="#000"
+            android:textSize="18sp" >
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#55ffffff">
+
+        <ImageView
+            android:id="@+id/iv_pre"	android:padding="10dp"
+            android:layout_width="wrap_content"	android:focusable="true"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/pre_pic" />
+	 <ImageView	
+            android:id="@+id/iv_save"	android:paddingTop="10dp" android:paddingBottom="10dp" android:paddingLeft="20dp" android:paddingRight="20dp"
+            android:layout_width="wrap_content"	android:focusable="true"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/save_pic" />
+        <ImageView
+            android:id="@+id/iv_next"	android:padding="10dp"
+            android:layout_width="wrap_content"	android:focusable="true"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/next_pic" />
+    </RelativeLayout>
+
+</RelativeLayout>

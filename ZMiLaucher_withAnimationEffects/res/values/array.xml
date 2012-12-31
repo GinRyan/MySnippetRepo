@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string-array name="entries_list_preference">
+    <item>仅在WIFI环境下下载</item>
+    <item>下载</item>
+    <item>不下载</item>
+</string-array>
+<string-array name="entriesvalue_list_preference">
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+</string-array>
+</resources>
