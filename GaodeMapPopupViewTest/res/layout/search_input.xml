@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:background="#ffffff"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content">
+  <LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="horizontal"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content">
+  <TextView
+  android:id="@+id/startView"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:text="起点 "
+  />
+  <EditText
+  android:id="@+id/startPut"
+  android:layout_width="160dip"
+  android:layout_height="wrap_content"
+  android:singleLine="true"
+  android:hint="请输入起点"
+  ></EditText>
+   <ImageButton
+  android:id="@+id/pointStart"
+  android:layout_width="49px"
+  android:layout_height="49px"
+  android:background="@drawable/dip"
+  android:layout_gravity="center_vertical"
+  ></ImageButton>
+  </LinearLayout>
+   <LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="horizontal"
+  android:layout_width="wrap_content"
+  android:layout_height="5dip">
+  </LinearLayout>
+    <LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="horizontal"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content">
+  <TextView
+  android:id="@+id/endView"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:text="终点 "
+  />
+  <EditText
+  android:id="@+id/endPut"
+  android:layout_width="160dip"
+  android:layout_height="wrap_content"
+  android:singleLine="true"
+  android:hint="请输入终点"
+  ></EditText>
+  <ImageButton
+  android:id="@+id/pointEnd"
+  android:layout_width="49px"
+  android:layout_height="49px"
+  android:background="@drawable/dip"
+  android:layout_gravity="center_vertical"
+  ></ImageButton>
+  </LinearLayout>
+     <Button
+  android:id="@+id/search"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:layout_gravity="center_horizontal"
+  android:layout_marginLeft="27dip"
+  android:layout_marginRight="20dip"
+  android:text="确定"
+  />
+</LinearLayout>

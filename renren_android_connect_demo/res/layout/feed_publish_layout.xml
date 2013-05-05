@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:padding="10dip">
+
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="新鲜事标题"
+			android:textSize="16sp" android:textColor="#333333" />
+		<EditText android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:singleLine="true" android:padding="5dip" android:textSize="14sp"
+			android:text="新鲜事标题" android:id="@+id/name" />
+
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="新鲜事主体内容"
+			android:textSize="16sp" android:textColor="#333333" />
+		<EditText android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:singleLine="true" android:padding="5dip" android:textSize="14sp"
+			android:text="新鲜事主体内容" android:id="@+id/description" />
+
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="新鲜事标题和图片指向的链接"
+			android:textSize="16sp" android:textColor="#333333" />
+		<EditText android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:singleLine="true" android:padding="5dip" android:textSize="14sp"
+			android:text="http://wiki.dev.renren.com/wiki/Feed.publishFeed"
+			android:id="@+id/url" />
+
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="新鲜事图片地址 "
+			android:textSize="16sp" android:textColor="#333333" />
+		<EditText android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:singleLine="true" android:padding="5dip" android:textSize="14sp"
+			android:text="http://s.xnimg.cn/imgpro/logo/logo-rr-159.png"
+			android:id="@+id/image" />
+
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="新鲜事副标题 注意：最多20个字符 "
+			android:textSize="16sp" android:textColor="#333333" />
+		<EditText android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:singleLine="true" android:padding="5dip" android:textSize="14sp"
+			android:text="新鲜事副标题" android:id="@+id/caption" />
+
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="新鲜事动作模块文案。 注意：最多10个字符 "
+			android:textSize="16sp" android:textColor="#333333" />
+		<EditText android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:singleLine="true" android:padding="5dip" android:textSize="14sp"
+			android:text="新鲜事动作模块文案" android:id="@+id/action_name" />
+
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="新鲜事动作模块链接 "
+			android:textSize="16sp" android:textColor="#333333" />
+		<EditText android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:singleLine="true" android:padding="5dip" android:textSize="14sp"
+			android:text="http://wiki.dev.renren.com/wiki/Feed.publishFeed"
+			android:id="@+id/action_link" />
+
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="用户输入的自定义内容 "
+			android:textSize="16sp" android:textColor="#333333" />
+		<EditText android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:singleLine="true" android:padding="5dip" android:textSize="14sp"
+			android:text="用户输入的自定义内容" android:id="@+id/message" />
+
+		<Button android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/run"
+			android:id="@+id/run" android:layout_marginTop="10dip"/>
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="返回结果"
+			android:textSize="16sp" android:textColor="#333333" />
+		<EditText android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:textColor="#000000"
+			android:gravity="top" android:editable="false" android:padding="5dip"
+			android:textSize="14sp" android:scrollbars="vertical" android:id="@+id/log" />
+	</LinearLayout>
+</ScrollView>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HitFM</string>
+    <string name="start">请插入线控比按下任意键开始游戏!</string>
+</resources>

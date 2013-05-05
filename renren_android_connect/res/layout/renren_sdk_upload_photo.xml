@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 上传图片的界面(竖屏) 本资源文件以renren_前缀开头，并且文件中定义的id均以renren_开头，用户自定义的资源文件和id等标识均不能使用renren_前缀，以示区分 
+	@Author sunting ting.sun@renren-inc.com -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="#FFFFFF">
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="horizontal" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:background="@drawable/renren_sdk_activity_title_bg" android:padding="1dip">
+		<ImageView android:src="@drawable/renren_sdk_logo"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+		<TextView android:text="@string/renren_sdk_title_upload_label"
+			android:layout_width="fill_parent" android:layout_height="fill_parent"
+			android:gravity="center_vertical" android:paddingLeft="3dip"
+			android:textColor="#FFFFFF" android:textSize="16sp"
+			android:paddingBottom="1dip" />
+	</LinearLayout>
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:padding="10dip">
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:orientation="horizontal" android:layout_width="fill_parent"
+			android:layout_height="50dip" android:layout_marginBottom="5dip">
+			<LinearLayout android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:padding="2dip"
+				android:background="@drawable/renren_sdk_edittext_bg">
+				<com.renren.api.connect.android.view.ProfilePhotoView
+					android:id="@+id/renren_sdk_profile_photo" android:layout_width="50dip"
+					android:layout_height="50dip" />
+			</LinearLayout>
+			<com.renren.api.connect.android.view.ProfileNameView
+				android:id="@+id/renren_sdk_profile_name" android:layout_width="wrap_content"
+				android:layout_height="fill_parent" android:textSize="20sp"
+				android:paddingLeft="10dip" android:textColor="#000000"
+				android:layout_weight="1" />
+			<TextView android:id="@+id/renren_sdk_photo_caption_counter"
+				android:layout_width="wrap_content" android:layout_height="fill_parent"
+				android:textColor="#000000" android:gravity="bottom"
+				android:textSize="14sp" android:text="0/140" android:layout_gravity="right" />
+		</LinearLayout>
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:orientation="vertical" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_marginBottom="10dip">
+			<EditText android:id="@+id/renren_sdk_photo_caption_value"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:hint="@string/renren_sdk_photo_caption_hint"
+				android:minLines="4" android:textSize="14sp" android:padding="3dip"
+				android:gravity="top" android:background="@drawable/renren_sdk_edittext_bg"
+				android:maxLength="140" />
+		</LinearLayout>
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:orientation="horizontal" android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:layout_marginBottom="15dip"
+			android:gravity="center" android:padding="5dip"
+			android:background="@drawable/renren_sdk_edittext_bg"
+			android:layout_weight="1">
+			<ImageView android:id="@+id/renren_sdk_photo_view_image"
+				android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		</LinearLayout>
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:orientation="horizontal" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:gravity="right">
+			<Button android:id="@+id/renren_sdk_upload_photo_submit"
+				android:layout_width="80dip" android:layout_height="36dip"
+				android:text="@string/renren_sdk_upload" android:layout_marginRight="5dip" />
+			<Button android:id="@+id/renren_sdk_upload_photo_cancel"
+				android:layout_width="80dip" android:layout_height="36dip"
+				android:text="@string/renren_sdk_cancel" />
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

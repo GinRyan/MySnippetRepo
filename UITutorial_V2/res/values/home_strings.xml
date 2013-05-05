@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="home_btnLayout1">布局1</string>
+	<string name="home_btnLayout2">布局2</string>
+	<string name="home_btntableLayout">表格布局</string>
+	<string name="home_btntRadio">Radio Button Demo</string>
+</resources>

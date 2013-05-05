@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="match_parent" android:layout_width="match_parent">
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:orientation="vertical">
+		<TextView android:layout_width="fill_parent"
+
+			android:layout_height="wrap_content" android:text="@string/hello" />
+		<TableLayout android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<TableRow>
+				<Button android:text="@string/home_btnLayout1" android:id="@+id/home_btnLayout1"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+				<Button android:text="@string/home_btnLayout2" android:id="@+id/home_btnLayout2"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+
+			</TableRow>
+			<TableRow>
+				<Button android:text="@string/home_btntableLayout"
+					android:id="@+id/home_btntableLayout" android:layout_width="wrap_content"
+					android:layout_height="wrap_content"></Button>
+				<Button android:text="@string/home_btntRadio" android:id="@+id/home_btnRadioLayout"
+					android:layout_height="wrap_content" android:layout_width="wrap_content"></Button>
+			</TableRow>
+
+
+			<TableRow>
+				<Button android:text="CheckBox" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/home_btnChk" />
+				<Button android:text="ListView" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/home_btnListViewLayout"></Button>
+			</TableRow>
+			<TableRow>
+				<Button android:text="Spinner" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/home_btnSpinnerLayout"></Button>
+				<Button android:text="ProgressBar" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/home_btnProgressbarLayout"></Button>
+			</TableRow>
+
+			<TableRow>
+				<Button android:text="@string/dial_button_btnDial"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:id="@+id/home_btnDial"></Button>
+				<Button android:text="SMS" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/home_btnSMS"></Button>
+			</TableRow>
+			<TableRow>
+				<Button android:text="Notification" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/home_btnNotification"></Button>
+				<Button android:text="输入框监听" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/home_btnEditTextChange"></Button>
+			</TableRow>
+			<TableRow>
+				<Button android:text="Activity Lifecycle"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:id="@+id/home_btnActivityLifeCycle"></Button>
+
+				<Button android:text="Handler" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/home_btnHandler"></Button>
+			</TableRow>
+
+			<TableRow>
+				<Button android:text="Frame Animation" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/home_btnFrameAnimation"></Button>
+				<Button android:text="@string/scaleanimation_btnStart"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:id="@+id/home_btnScaleAnimation" />
+			</TableRow>
+			<TableRow>
+				<Button android:text="Rotate Animation" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/home_btnRotateAnimation" />
+				<Button android:text="Translate Animation"
+				 android:id="@+id/home_btnTranslateAnimation"
+				  android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+					
+			</TableRow>
+			<TableRow>
+				<Button android:text="Alpha Animation" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/home_btnAlphaAnimation" />
+				 <Button android:text="AutoCompleteTextView"
+				 android:id="@+id/home_btnAutoComplete"
+				  android:layout_width="wrap_content" android:layout_height="wrap_content"></Button> 
+					
+			</TableRow>
+		</TableLayout>
+	</LinearLayout>
+</ScrollView>
+

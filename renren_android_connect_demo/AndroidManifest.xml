@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.renren.api.connect.android.demo" android:versionCode="1"
+	android:versionName="1.0">
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+	<application android:icon="@drawable/icon" android:label="@string/app_name">
+		<activity android:name=".RenrenSDKDemo" android:label="@string/app_name">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		
+		<!-- renren sdk中的Activity -->
+		<!-- 辅助完成SSO、Oauth的Activity ，必须在AndroidManifest.xml中声明 -->
+		<activity
+			android:name="com.renren.api.connect.android.AuthorizationHelper$BlockActivity"
+			android:theme="@android:style/Theme.Dialog"></activity>
+			
+		<!-- 发布状态的Activity，如需使用一键发布状态的功能，则必须在AndroidManifest.xml中声明 -->
+		<activity android:name="com.renren.api.connect.android.status.StatusPubActivity"></activity>
+		
+		<!-- 发布照片的Activity，如需使用一键上传图片的功能，则必须在AndroidManifest.xml中声明 -->
+		<activity android:name="com.renren.api.connect.android.photos.UploadPhotoActivity"></activity>
+		
+		<!-- 创建相册的Activity，如需使用一键创建相册的功能，则必须在AndroidManifest.xml中声明 -->
+		<activity android:name="com.renren.api.connect.android.photos.CreateAlbumActivity"></activity>
+		
+		<!-- Activities in the demo -->
+		<activity android:name=".activity.ApiListActivity"></activity>
+		<activity android:name=".activity.ApiUploadPhotoActivity"></activity>
+		<activity android:name=".activity.ApiCreateAlbumActivity"></activity>
+		<activity android:name=".activity.ApiGetAlbumsActivity"></activity>
+		<activity android:name=".activity.StatusPublishActivity"></activity>
+		<activity android:name=".activity.LogActivity"></activity>
+		<activity android:name=".activity.ApiUsersInfoActivity"></activity>
+		<activity android:name=".activity.FriendsGetActivity"></activity>
+		<activity android:name=".activity.PayActivity"></activity>
+		<activity android:name=".activity.FriendsGetFriendsActivity"></activity>
+		<activity android:name=".activity.ApiFeedPublishActivity"></activity>
+		<activity android:name="com.renren.api.connect.android.pay.view.PayRepairActivity"></activity>
+	</application>
+	
+	<!-- renren sdk 需要的权限 ，必须在AndroidManifest.xml中声明 -->
+	<uses-permission android:name="android.permission.INTERNET" />
+	
+	<uses-permission android:name="android.permission.READ_LOGS" />  
+</manifest>

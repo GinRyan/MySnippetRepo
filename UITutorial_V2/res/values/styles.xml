@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="sharp">
+		<item name="android:textColor">#0000cc</item>
+	</style>
+	<style name="sharpTheme">
+		<item name="android:textColor">#0000cc</item>
+	</style>
+</resources>

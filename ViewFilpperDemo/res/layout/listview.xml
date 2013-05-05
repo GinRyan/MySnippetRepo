@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/linear"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <LinearLayout 
+    	android:orientation="vertical"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    >
+    <!-- 照片 -->
+    <ImageView android:id="@+id/image"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_margin="15dip"
+    />
+    <LinearLayout 
+    	android:orientation="horizontal"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    >
+    <!-- 喜欢 -->
+    <ImageView android:id="@+id/image1"
+    	android:layout_width="wrap_content"
+		android:layout_height="wrap_content"    	
+    />
+    <TextView android:id="@+id/text"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:textColor="#FC6262"
+    	android:layout_margin="5dip"
+    />
+    </LinearLayout>
+    
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"    
+    >
+    <TextView android:id="@+id/title"  
+           	android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"  
+            android:textColor="#FFFFFFFF" 
+            android:textSize="25px" 
+            android:layout_marginTop="8dip"
+            />  
+        <TextView android:id="@+id/info"  
+           	android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"  
+            android:textColor="#FFFFFFFF" 
+            android:textSize="15px"
+            android:layout_marginTop="5dip"
+             />  
+    </LinearLayout>
+</LinearLayout>

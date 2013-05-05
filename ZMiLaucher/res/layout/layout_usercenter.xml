@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/default_homebg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rel_back"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+    android:background="#22ffffff" android:padding="5dip">
+
+        <Button	android:id="@+id/btn_back"
+            android:layout_width="wrap_content"	android:background="@drawable/b_back"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="帐号设置"	android:layout_centerInParent="true"
+            android:textColor="#494949"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="40dip"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/sina_relate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_list_corner_top"
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            <ImageView
+                android:id="@+id/sina_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/sinaweibo" >
+            </ImageView>
+
+            <TextView
+                android:id="@+id/sinauser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@+id/sina_iv"
+                android:text="新浪微博"	android:textColor="#696969"
+                android:textSize="18sp" >
+            </TextView>
+
+            <Button
+                android:id="@+id/sinaload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:background="@drawable/more_userset_login"
+                android:focusable="false"
+                android:text="未登录"
+                android:textColor="#3d3d3d" >
+            </Button>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

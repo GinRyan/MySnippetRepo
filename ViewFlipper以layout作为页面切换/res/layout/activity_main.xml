@@ -1,0 +1,56 @@
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flipper1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/newers_guide_a"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/newers_guide_a"
+        android:orientation="vertical" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/newers_guide_b"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/newers_guide_b"
+        android:orientation="vertical" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/newers_guide_c"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/newers_guide_c"
+        android:orientation="vertical" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/newers_guide_d"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/newers_guide_d"
+        android:orientation="vertical" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/newers_guide_e"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/newers_guide_e"
+        android:orientation="vertical"
+        android:paddingBottom="27dp" >
+
+        <Button
+            android:id="@+id/go_and_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/go" />
+    </RelativeLayout>
+
+</ViewFlipper>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/menu_background">
+
+
+	<LinearLayout android:id="@+id/linearLayout2"
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+        android:layout_height="fill_parent" android:layout_weight="2" android:layout_marginBottom="10dp" android:layout_marginLeft="10dp">
+        
+	        <View
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="2"
+		        android:scaleType="fitCenter"
+	        />
+
+			
+			<Button android:id="@+id/startButton" 
+				android:layout_width="fill_parent"
+        		android:layout_height="fill_parent"
+				android:layout_weight="3"
+				android:onClick="playGame" 
+				android:background="@drawable/menu_button_play_game"
+			android:layout_margin="5dp"/>
+			<Button android:id="@+id/highscoreButton"
+				android:layout_width="fill_parent"
+        		android:layout_height="fill_parent"
+				android:layout_weight="3"
+				android:background="@drawable/menu_button_highscore"
+				android:onClick="showScore"
+			android:layout_margin="5dp"/>	
+		
+			<Button android:id="@+id/infoButton" 
+				android:layout_width="fill_parent" 
+				android:layout_height="fill_parent"
+				android:layout_weight="3" 
+				android:background="@drawable/menu_button_information"
+				android:onClick="showInfo"
+			android:layout_margin="5dp"/>
+	</LinearLayout>
+
+	<LinearLayout
+	    android:id="@+id/linearLayout3"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_weight="1"
+	    android:gravity="right"
+	    android:orientation="vertical" >
+	</LinearLayout>
+	
+</LinearLayout>

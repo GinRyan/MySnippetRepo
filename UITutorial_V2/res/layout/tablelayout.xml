@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:stretchColumns="0,1,2,3">
+    <TableRow android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView android:gravity="center"
+    android:text="@string/tablelayout_table_col1_title"></TextView>
+     <TextView android:gravity="center"
+    android:text="@string/tablelayout_table_col2_title"></TextView>
+     <TextView android:gravity="center"
+    android:text="@string/tablelayout_table_col3_title"></TextView>
+    </TableRow>
+    <TableRow android:layout_width="match_parent"
+    android:layout_height="match_parent">
+     <TextView android:gravity="center"
+    android:text="@string/tablelayout_table_col1_row1"></TextView>
+     <TextView android:gravity="center"
+    android:text="@string/tablelayout_table_col2_row1"></TextView>
+     <TextView android:gravity="center"
+    android:text="@string/tablelayout_table_col3_row1"></TextView>
+    </TableRow>
+    
+     <TableRow android:layout_width="match_parent"
+    android:layout_height="match_parent">
+     <TextView android:gravity="center"
+    android:text="@string/tablelayout_table_col1_row2"></TextView>
+     <TextView android:gravity="center"
+    android:text="@string/tablelayout_table_col2_row2"></TextView>
+     <TextView android:gravity="center"
+    android:text="@string/tablelayout_table_col3_row2"></TextView>
+    </TableRow>
+</TableLayout>

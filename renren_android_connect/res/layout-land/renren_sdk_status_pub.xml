@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" 
+	android:background="#ffffff" 
+	android:isScrollContainer="true" >
+	<RelativeLayout android:id="@+id/renren_sdk_status_user_info" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/renren_sdk_activity_title_bg">
+		<ImageView android:id="@+id/renren_sdk_title_logo"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:paddingBottom="1dip"
+			android:src="@drawable/renren_sdk_logo" />
+		<TextView android:id="@+id/renren_sdk_title_text"
+			android:gravity="center_vertical"
+			android:layout_width="fill_parent" 
+			android:layout_height="35dip"
+			android:layout_toRightOf="@id/renren_sdk_title_logo"
+			android:textSize="16sp"
+			android:paddingLeft="3dip"
+			android:textColor="@color/renren_sdk_title_text"
+			android:text="@string/renren_sdk_title_label"/>
+	</RelativeLayout>
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_below="@id/renren_sdk_status_user_info"
+		android:layout_marginLeft="10dip"
+		android:layout_marginTop="10dip"
+		android:layout_marginRight="10dip"
+		android:layout_marginBottom="10dip">
+		<com.renren.api.connect.android.view.ProfilePhotoView 
+			android:id="@+id/renren_sdk_profile_photo"
+			android:layout_width="50dip" 
+			android:layout_height="50dip"
+			android:layout_marginRight="10dip"/>
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_toRightOf="@id/renren_sdk_profile_photo"
+			android:orientation="vertical">
+			<com.renren.api.connect.android.view.ProfileNameView 
+				android:id="@+id/renren_sdk_profile_name"  android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:textSize="20sp"
+				android:layout_marginBottom="10dip"
+				android:textColor="#000000" />
+			<TextView android:id="@+id/renren_sdk_status_ch_counter" 
+				android:layout_alignParentRight="true" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:textColor="#000000"
+				android:gravity="right" 
+				android:textSize="14sp" android:text="0/140"
+				android:layout_centerVertical="true" />
+			<EditText android:id="@+id/renren_sdk_status_edit_text"
+				android:background="@drawable/renren_sdk_edittext_bg"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:gravity="top" android:textSize="16sp"
+				android:minLines="5" android:focusable="true"
+				android:focusableInTouchMode="true" 
+				android:layout_weight="1"
+				android:maxLength="140"
+				android:layout_marginBottom="10dip"
+				android:padding="4dip" android:autoText="true" android:capitalize="sentences"
+				android:hint="@string/renren_sdk_status_hint" 
+				android:inputType="textShortMessage|textAutoCorrect|textCapSentences|textMultiLine"/>
+			<RelativeLayout
+				android:id="@+id/renren_sdk_status_pub_buttons" 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+				<Button android:id="@+id/renren_sdk_status_cancel"
+					android:layout_alignParentRight="true"
+					android:gravity="center"
+					android:layout_width="80dip" android:layout_height="36dip"
+					android:textSize="14sp"
+					android:layout_marginLeft="20dip"
+					android:text="@string/renren_sdk_status_cancel"/>
+				<Button android:id="@+id/renren_sdk_status_publish"
+					android:layout_toLeftOf="@id/renren_sdk_status_cancel"
+					android:layout_width="80dip" android:layout_height="36dip"
+					android:textSize="14sp"
+					android:gravity="center"
+					android:text="@string/renren_sdk_status_publish"/>
+			</RelativeLayout>
+		</LinearLayout>
+	</RelativeLayout>
+</RelativeLayout>	

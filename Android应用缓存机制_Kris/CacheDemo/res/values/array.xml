@@ -1,0 +1,141 @@
+<resources>
+
+    <string-array name="images">
+        <item>http://krislq.com/wp-content/uploads/2012/11/d57e99949b600075d31b702a-100x150.jpg</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/img_1868-150x150.jpg</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/img_1873-150x150.jpg</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/img_1883-150x150.jpg</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/img_1905-150x150.jpg</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/img_1907-150x150.jpg</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/img_1908-150x150.jpg</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/img_1914-150x150.jpg</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/IMG_1936-150x150.jpg</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/IMG_1937-150x150.jpg</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/IMG_1943-150x150.jpg</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/IMG_1944-150x150.jpg</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/IMG_1945-150x150.jpg</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/IMG_1950-150x150.jpg</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/img_7304-150x150.jpg</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/img_7310-150x150.jpg</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/img_7330-150x150.jpg</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/img_7354-150x150.jpg</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/img_7461-150x150.jpg</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/img_7464-150x150.jpg</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/img_7466-150x150.jpg</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/img_7476-150x150.jpg</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/img_7548-150x150.jpg</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/img_7560-150x150.jpg</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/img_7600-150x150.jpg</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/img_7629-150x150.jpg</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/img_7652-150x150.jpg</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/img_7674-150x150.jpg</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/kris-150x150.png</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/threadPools-150x150.png</item>
+        <item>http://krislq.com/wp-content/uploads/2012/11/threadPools.png</item>
+    </string-array>
+    <string-array name="texts">
+        <item>android seekbar setProgress设置到最大值 再次设置无用  </item>
+        <item>android 4.0 toast 字体显示很小  </item>
+        <item>火烈鸟自热服装制服骗子  </item>
+        <item>spinner样式  </item>
+        <item>求助Paint paint=new Paint()时老是报警错误，在网上找不到解决...  </item>
+        <item> 如图这个功能怎么实现的？  </item>
+        <item> MQTT的学习研究（十五） MQTT 和android整合文章  </item>
+        <item>MQTT的学习研究（十四） MQTT moquette 的 Callback API 消息发布...  </item>
+        <item> TextView内添加图片的排版问题  </item>
+        <item>  想请教一下这样的界面和内部activity的跳转逻辑是怎么实现的  </item>
+        <item> android中http请求的转发  </item>
+        <item>MQTT的学习研究（十三) IBM MQTTV3 简单发布订阅实例  </item>
+        <item>Android mediaplayer循环播放视频  </item>
+        <item>MQTT的学习研究（十二） MQTT moquette 的 Future API 消息发布订...  </item>
+        <item>还是基础的问题，求大神。操控控件问题。  </item>
+        <item>  MQTT的学习研究（十一) IBM MQTT 简单发布订阅实例  </item>
+        <item> android用户更喜欢无线网络而非3g网络  </item>
+        <item> MQTT的学习研究（十)【转】mosquitto——一个开源的mqtt代理  </item>
+        <item>MQTT的学习研究（九）基于HTTP GET MQTT 抓取消息服务端使用  </item>
+        <item>MQTT的学习研究（八）基于HTTP DELETE MQTT 订阅消息服务端使用  </item>
+        <item>MQTT的学习研究（七）基于HTTP POST MQTT 发布消息服务端使用  </item>
+        <item> MQTT的学习研究（六） MQTT moquette 的 Blocking API 订阅消息客...  </item>
+        <item>MQTT的学习研究（五） MQTT moquette 的 Blocking API 发布消息服...  </item>
+        <item>半小时前回复 [2] 请问EditText能实现像图片一样通过手势旋转的效果吗？  </item>
+        <item>MQTT的学习研究（四）moquette-mqtt 的使用之mqtt Blocking API客户...  </item>
+        <item>App Store应用数量突破100万 45%活跃应用需付费</item>
+        <item> Android创新速度领先：蚕食iOS市场份额</item>
+        <item> MQTT的学习研究（三）moquette-mqtt 的使用之mqtt服务发布主题...</item>
+        <item> MQTT的学习研究（二）moquette-mqtt 的使用之mqtt broker的启动</item>
+        <item> MQTT的学习研究（一）</item>
+        <item>android自定义控件 带有check状态</item>
+        <item>Notification在不点击打开的情况下，如何自动消失？</item>
+        <item>請教ActionBar左上角圖示變更</item>
+        <item>Android 程序可以像QQ那样在后台运行，求大神指教</item>
+        <item>onTouch左右滑动问题</item>
+        <item>Activity跳转利用Bundle传递“对象数组”</item>
+        <item>新手求教 为啥service不能开机自启动</item>
+        <item>帮父母找孩子幸福团聚</item>
+        <item>android TabHost小结 （转）</item>
+        <item>Android应用添加(创建)和删除及判断是否存在桌面快捷方式</item>
+        <item>向系统注入两点触摸事件 （转）</item>
+        <item> ViewPager左右无限循环 （转）</item>
+        <item>挂在应用后如何获取焦点</item>
+        <item>点击悬浮窗口返回Activity 速度很慢， 这是为什么？？？</item>
+        <item> 如何用android解析一个opencv的xml矩阵（是一维的）？？</item>
+        <item>[5] [业界动态]小麦娘分享：步步高2012 vivo X1新品发布会</item>
+        <item>[2] 如何管理你的线程池（Executor）</item>
+        <item>[0] widget点击事情捕获问题</item>
+        <item>[0] android后台运行时弹出正在运行通知（类似QQ效果）</item>
+        <item>[0] Android输入法切换引导功能</item>
+        <item> [5] java.lang.ClassCastException: android.widget.LinearLayout$LayoutParams</item>
+        <item> [2] 谁有关于android开发IQ测试题心理测试题系统的讲解啊</item>
+        <item>[1] 百度地图滑动事件问题</item>
+        <item>[0] Android 基础知识 二十二</item>
+        <item> [1] 如何实现anyview中不解压直接读取压缩文件？</item>
+        <item>[1] android 基础知识 二十一</item>
+        <item> [1] Navicat for SQLite注册机</item>
+        <item> [0] Activity知识点总结--锁定横竖屏问题</item>
+        <item> [3] 移动广告盈利联盟</item>
+        <item>[9] 多盟是不是准备倒闭了，太坑爹了吧！</item>
+        <item> [7] 引用第三方jar包 必须打包到apk吗</item>
+        <item>[2] 常用的线程池</item>
+        <item>[9] 请教如何让services在应用软件安装后自动运行？</item>
+        <item>[1] 请教如何让services在应用软件安装后自动运行？</item>
+        <item> [2] 【Go短信【有图】】求大神指点GO短信的widget动画翻页折叠...</item>
+        <item> [0] 关于下载android源码</item>
+        <item> [2] 系统引导 开发</item>
+        <item>[16] 【爆料】移动广告行业内部真正的黑幕 暗扣50%</item>
+        <item> [2] 360浮动窗口效果</item>
+        <item> [1] ViewPager 实现软件引导页</item>
+        <item> [0] 怎么调试跟踪源码</item>
+        <item> [10] 程序员写科幻小说之《逆网》</item>
+        <item>[0] CDMA手机信号强度显示</item>
+        <item>[0] Android数字输入器</item>
+        <item>[5] 不要再看这个帖子了</item>
+        <item> [3] 无法完成JDK 的安装，求解！！！</item>
+        <item> [3] 求一中文API</item>
+        <item> [5] 关于简单类型不能够精确的对浮点数进行运算的问题</item>
+        <item>[1] 【求教】GooglePlay 开发者收费问题</item>
+        <item>[2] Android自动化测试之使用java调用monkeyrunner</item>
+        <item>[14] 怎么设置控件（如下拉列表）无效？</item>
+        <item>[0] 关于模拟器无法接收BOOT_COMPLETED的问题</item>
+        <item>[4] webView 如何打开文档/文件</item>
+        <item>[2] 简单的身份证识别软件</item>
+        <item>[3] 求助：微信聊天界面listview反弹效果实现</item>
+        <item>[2] autocompletetextview</item>
+        <item>[1] PacketExtension的用法。。。。。。。求实例</item>
+        <item>[2] win7 AVD 创建SD失败 Failed to create the SD card</item>
+        <item>[2] 社区首页热门话题那里排版有问题啊。。。好久了吧</item>
+        <item>android调用百度手机地图API</item>
+        <item>关于调用热敏打印机</item>
+        <item>在使用float或者double做运算的时候，出现精度偏移的解决办法</item>
+        <item>第三季移动互联网趋势报告 Android占22.44%第三位</item>
+        <item> 【每日话题】程序猿们，逆袭开始了！！</item>
+        <item> ipad互动数字沙盘/ipad电子楼书/ipad游戏开发/ipad应用开发</item>
+        <item> 1[3] Android 进程 线程</item>
+        <item> 1[10] 为什么我们程序员难晋升</item>
+        <item>1[3] 苦逼的程序员</item>
+        <item> [15] 让人讨厌的几类程序员</item>
+        <item>[8] 永远不要相信计算机</item>
+        <item> [2] 如何屏蔽掉360之类的程序？</item>
+        <item>优亿开发者社区2012年11月21日签到记录贴  </item>
+    </string-array>
+
+</resources>

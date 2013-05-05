@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/renren_demo_root"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@color/main_bg">
+	<RelativeLayout android:id="@+id/renren_demo_titlebar"
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent" android:layout_height="50dip"
+		android:paddingLeft="10dip" android:paddingRight="10dip"
+		android:paddingTop="10dip" android:paddingBottom="10dip"
+		android:background="@drawable/renren_demo_titlebar_background">
+		<Button android:id="@+id/renren_demo_titlebar_left_button"
+			android:background="@drawable/renren_demo_titlebar_left_button"
+			android:layout_width="60dip" android:layout_height="40dip"
+			android:layout_alignParentLeft="true" android:text="返回"
+			android:textColor="#FFFFFF" android:textSize="14sp" />
+		<TextView android:id="@+id/renren_demo_titlebar_title_text"
+			android:text="" android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:gravity="center"
+			android:textSize="20sp" android:textColor="#FFFFFF" />
+		<Button android:id="@+id/renren_demo_titlebar_right_button"
+			android:background="@drawable/renren_demo_titlebar_right_button"
+			android:layout_width="60dip" android:layout_height="40dip"
+			android:layout_alignParentRight="true" android:text="查看Log"
+			android:textColor="#FFFFFF" android:textSize="14sp" />
+	</RelativeLayout>
+</LinearLayout>

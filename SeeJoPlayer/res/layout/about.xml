@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+    
+    <ImageButton
+    	android:id="@+id/cancel"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_gravity="top|right"
+    	android:layout_marginTop="10dip"
+    	android:layout_marginRight="10dip"
+    	android:layout_marginBottom="10dip"
+    	android:src="@drawable/del"
+    	android:background="#0000003D"
+    />
+    <ScrollView  
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	>
+    <TextView  
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"   
+    	android:text="欢迎使用SeeJoPlayer！\n\n
+    					SeeJoPlayer是一款灵巧便捷的视频播放器。它使用您设备默认的解码器进行解码，从而保证播放的速度和效果。\n
+    					本软件为本人利用业余时间开发，免费提供给大家使用，请大家尽情享受SeeJoPlayer所带来的流畅播放体验吧！\n\n
+    					快捷操作技巧:\n\n
+    					全屏切换：\t双击屏幕\n\n
+    					播放/暂停：\t长按屏幕\n\n
+    					静音/恢复：\t长按音量按钮\n\n
+    					播放列表：\t控制面板最右边的按钮(目前暂不支持编辑功能)\n\n
+    					音量调节：\t单击音量按钮，在弹出的音量显示区域触摸改变音量\n\n\n
+    					如果您在使用SeeJoPlayer的过程中有任何的意见和建议，或者您对SeeJoPlayer的技术实现细节有任何疑问和建议需要交流，甚至您希望获取SeeJoPlayer的源代码！\n\n请联系我：\n\n
+    					email:\t\t\tzh.weir@gmail.com\n
+    					我的博客：\thttp://www.blogjava.net/zh-weir\n\n\n最后声明：本软件所使用的UI素材均来自于网络，如果侵犯了您的合法权益，请联系我，我会及时更换。\n\n感谢您的使用！\n\n"
+    	android:textSize="18dip"
+    	android:textColor="#99FFFFFF"
+    	android:autoLink="email|web"
+    	
+    />
+    </ScrollView>
+    
+    
+</LinearLayout>

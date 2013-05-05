@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <View style="@style/Line"/>
+	<RelativeLayout android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:padding="5dp">
+	    <ImageView android:id="@+id/iv_picture" 
+	        android:layout_width="40dip"
+	        android:layout_height="40dip"
+	        android:src="@drawable/default_user"/>
+	    <LinearLayout android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@+id/iv_picture"
+	        android:layout_alignTop="@+id/iv_picture"
+	        android:orientation="vertical"
+	        android:layout_marginLeft="10dp"
+	        android:id="@+id/layout_body">
+	        <!-- User Name -->
+	        <LinearLayout android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal">
+	            <TextView style="@style/userName"
+	                android:id="@+id/tv_from_username"
+	                android:singleLine="true"
+	                android:maxWidth="150dip"
+	                android:ellipsize="end"/>
+	        </LinearLayout>
+	        <!-- 描述　message -->
+	        <TextView android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:id="@+id/tv_message"
+	            android:textSize="13sp"
+	            android:lineSpacingExtra="1.25dp"
+	            android:layout_marginTop="3dp"
+	            android:textColor="#333"/>
+	        <LinearLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/layout_photos"
+                android:visibility="gone">
+	            </LinearLayout>
+	        <RelativeLayout android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:id="@+id/layout_content"
+	            
+	            android:padding="5dip"
+	            android:layout_marginTop="5dip"
+	            android:layout_marginBottom="5dip">
+	            <ImageView android:layout_width="70dip"
+	                android:layout_height="70dip"
+	                android:layout_alignParentLeft="true"
+	                android:src="@drawable/default_image"
+	                android:id="@+id/iv_icon"/>
+	            <LinearLayout android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/iv_icon"
+	                android:orientation="vertical"
+	                android:gravity="top"
+	                android:layout_marginLeft="5dip"
+	                android:id="@+id/layout_description">
+	                <TextView android:layout_width="fill_parent"
+	                    android:layout_height="wrap_content"
+	                    android:textColor="#000"
+	                    android:textStyle="bold"
+	                    android:id="@+id/tv_title"/>
+	            </LinearLayout>
+
+	        </RelativeLayout>
+	    </LinearLayout>
+	</RelativeLayout>
+    <View style="@style/Line"/>
+</LinearLayout>

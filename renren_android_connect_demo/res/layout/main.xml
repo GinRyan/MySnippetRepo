@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_bg"
+    >
+   	 
+   	 <!-- Logo --> 
+   	 <ImageView android:layout_width="wrap_content"
+   	 	android:layout_height="wrap_content"
+   	 	android:layout_gravity="center_horizontal"
+   	 	android:paddingTop="15dip"
+   	 	android:src="@drawable/renren_login_logo"/>
+   	 
+   	 <!-- Upload Photo Without Login -->
+   	 <LinearLayout 
+   	 	android:layout_width="fill_parent"
+   	 	android:layout_height="wrap_content"
+   	 	android:layout_gravity="center"
+   	 	android:orientation="vertical" android:paddingLeft="40dip"
+   	 	 android:paddingRight="40dip" android:paddingTop="10dip">
+   	 	<Button 
+   	 		android:id="@+id/renren_demo_upload_photo_without_login"
+   	 		android:layout_width="fill_parent"
+   	 		android:layout_height="40dip"
+   	 		android:layout_marginBottom="12dip"
+   	 		android:gravity="center"
+   	 		android:background="@drawable/auth_button_bg"
+   	 		android:text="一键上传照片"/>
+   	 </LinearLayout>
+   	 
+   	 <!-- auth buttons -->
+   	 <LinearLayout 
+   	 	android:layout_width="fill_parent"
+   	 	android:layout_height="wrap_content"
+   	 	android:layout_gravity="center"
+   	 	android:orientation="vertical"
+   	 	android:paddingLeft="40dip" android:paddingRight="40dip"
+   	 	android:paddingTop="20dip" android:paddingBottom="20dip">
+   	 	<TextView 
+   	 		android:layout_width="fill_parent"
+   	 		android:layout_height="wrap_content"
+   	 		android:paddingBottom="5dip"
+   	 		android:gravity="left"
+   	 		android:textColor="@color/login_hint_text"
+   	 		android:text="@string/login_hint"/>
+   	 	<Button 
+   	 		android:id="@+id/auth_site_mode"
+   	 		android:layout_width="fill_parent"
+   	 		android:layout_height="40dip"
+   	 		android:layout_marginBottom="12dip"
+   	 		android:gravity="center"
+   	 		android:background="@drawable/auth_button_bg"
+   	 		android:text="@string/auth_site_mode"/>
+   	 	<Button 
+   	 		android:id="@+id/sso_mode"
+   	 		android:layout_width="fill_parent"
+   	 		android:layout_height="40dip"
+   	 		android:layout_marginBottom="12dip"
+   	 		android:gravity="center"
+   	 		android:background="@drawable/auth_button_bg"
+   	 		android:text="@string/sso_mode"/>
+   	 	<Button 
+   	 		android:id="@+id/password_flow_mode"
+   	 		android:layout_width="fill_parent"
+   	 		android:layout_height="40dip"
+   	 		android:gravity="center"
+   	 		android:background="@drawable/auth_button_bg"
+   	 		android:text="@string/password_flow_mode"/>
+   	 </LinearLayout>
+   	 	
+   	 <!-- footer -->
+   	 <LinearLayout 
+   	 	android:layout_width="fill_parent"
+   	 	android:layout_height="fill_parent">
+   		 <TextView 
+   	 		android:layout_width="fill_parent"
+   	 		android:layout_height="wrap_content"
+   	 		android:layout_gravity="bottom"
+   	 		android:paddingBottom="20dip"
+   	 		android:text="@string/copyright"
+   	 		android:textColor="@color/copyright_info" 
+   	 		android:gravity="center_horizontal"/>
+   	 </LinearLayout>
+</LinearLayout>

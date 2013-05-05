@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dial_app_name">打电话示例</string>
+    <string name="dial_button_btnDial">拨打</string>
+      <string name="dial_label_lblPhoneNum">请输入电话号码:</string>
+</resources>

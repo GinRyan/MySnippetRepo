@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="ParserError">
+        <ignore path="src\com\example\listoflist\InsListActivity.java" />
+        <ignore path="src\com\example\listoflist\InsListItemAdapter.java" />
+    </issue>
+</lint>

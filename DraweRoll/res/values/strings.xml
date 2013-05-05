@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, RollActivity!</string>
+    <string name="app_name">RollTest</string>
+    <string name="string_menu_joker"></string>
+    <string name="fri_label_btn_call">打电话</string>
+    <string name="fri_label_btn_ta">空间</string>
+    <string name="fri_label_btn_sms">发短信</string>
+</resources>

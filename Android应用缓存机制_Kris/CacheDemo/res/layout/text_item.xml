@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dip">
+	<TextView style="@style/userName"
+         android:id="@+id/tv_name"
+         android:singleLine="true"
+         android:textSize="20sp"
+         android:textStyle="bold"
+         android:ellipsize="end"/>
+    <View style="@style/Line"/>
+</LinearLayout>

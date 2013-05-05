@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">	
+
+
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:padding="10dp" 
+	
+	>
+
+	<TextView  
+		android:id="@+id/titleSaveScore"
+	  	android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"    
+	    android:text="Save your Highscore" 
+	    android:textSize="26dp"
+	    android:textColor="#92C36F"
+	    />
+	    
+	 <TextView  
+	 	android:layout_marginTop="15dp" 
+		android:id="@+id/labelScore"
+	  	android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"    
+	    android:text="Your score was:" 
+	    android:textSize="20dp"
+	    android:textColor="#876842"
+	    />				
+		
+	<TextView
+		android:id="@+id/score" 
+	  	android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="2301"
+		android:textColor="#39583E" 
+		android:textStyle="bold"/>
+
+	<TextView  
+		android:layout_marginTop="15dp" 
+		android:id="@+id/labelName"
+	  	android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"    
+	    android:text="Enter your name:" 
+	    android:textSize="20dp"
+	    android:textColor="#876842"
+	    />
+				
+	<EditText android:id="@+id/title" 
+	  	android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		/>
+		
+	<CheckBox android:id="@+id/postOnline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save my score online as well"
+        android:textColor="#876842" />
+	
+	<Button android:id="@+id/confirm"
+		android:layout_marginTop="15dp" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+	    android:text="Save"
+		/>
+</LinearLayout>
+
+</LinearLayout>

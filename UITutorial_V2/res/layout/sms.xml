@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" android:weightSum="1">
+    <TextView android:text="请输入号码：" android:id="@+id/sms_lblPhoneNum" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+    <EditText android:layout_height="wrap_content" android:layout_width="match_parent"
+     android:id="@+id/sms_txtPhoneNum">
+        <requestFocus></requestFocus>
+    </EditText>
+    <TextView android:text="请输入内容：" android:id="@+id/sms_lblSmsContent" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+    <EditText android:layout_height="wrap_content" android:layout_width="match_parent" 
+    android:id="@+id/sms_txtSmsContent" android:inputType="textMultiLine" android:layout_weight="0.42"></EditText>
+    <Button android:text="发送" android:id="@+id/sms_btnSendSms" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+    
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="radiolayout_app_name">Radio Button</string>
+    <string name="radiolayout_radio1">Windows</string>
+    <string name="radiolayout_radio2">Linux</string>
+    <string name="radiolayout_radio3">Unix</string>
+    <string name="radiolayout_radio4">Others</string>
+</resources>

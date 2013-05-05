@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/texttip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/padding_medium"
+        android:text="录音和播放音频测试方案1"
+        tools:context=".MainActivity" />
+
+    <Button
+        android:id="@+id/record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/texttip"
+        android:layout_below="@id/texttip"
+        android:text="录音测试" />
+
+    <Button
+        android:id="@+id/play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/record"
+        android:layout_toRightOf="@id/record"
+        android:text="播放测试" />
+
+    <TextView
+        android:id="@+id/tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/record"
+        android:layout_below="@id/record"
+        android:text="tip" />
+
+    <ImageView
+        android:id="@+id/iv_vu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tip"
+        android:layout_below="@+id/tip"
+        android:layout_marginTop="20dp"
+        android:background="#000000"
+        android:src="@drawable/amp_land_1" />
+
+</RelativeLayout>

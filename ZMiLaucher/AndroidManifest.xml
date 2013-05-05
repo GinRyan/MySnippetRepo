@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ljp.laucher"
+    android:versionCode="2"
+    android:versionName="1.02" >
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".MiLaucherActivity"		android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar"    android:screenOrientation="portrait" >
+                          <intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="life" android:host="UserCheckActivity" />
+			</intent-filter>
+        </activity>
+        <activity
+          android:name=".LoadingActivity"	
+            android:theme="@android:style/Theme.NoTitleBar"    android:screenOrientation="portrait" >
+                              <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name=".adview.TestActivity"
+            android:theme="@android:style/Theme.NoTitleBar"    android:screenOrientation="portrait" >
+ 
+        </activity>
+        <activity
+            android:name=".additem.AddItemActivity"
+            android:theme="@android:style/Theme.NoTitleBar"    android:screenOrientation="portrait" />
+        <activity
+            android:name=".itemcontent.WeiboDetailActivity"	android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar"    android:screenOrientation="portrait" >
+                              <intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="life" android:host="DetailActivity" />
+			</intent-filter>
+        </activity>
+         <activity
+            android:name=".usercenter.UserWeiboActivity"	android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar"    android:screenOrientation="portrait" >
+                              <intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="life" android:host="UserWeiboActivity" />
+			</intent-filter>
+        </activity>
+        <activity
+            android:name=".picsshow.VIPPicsShowActivity"
+            android:theme="@android:style/Theme.NoTitleBar"    android:screenOrientation="portrait" >
+                          
+        </activity>
+          <activity
+            android:name=".picsshow.PicsShowActivity"
+            android:theme="@android:style/Theme.NoTitleBar"    android:screenOrientation="portrait" >
+                          
+        </activity>
+        <activity
+            android:launchMode="singleTask"
+            android:name=".usercenter.UserCenterActivity"
+            android:theme="@android:style/Theme.NoTitleBar"    android:screenOrientation="portrait" >
+            <intent-filter >
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:host="LoginActivity"
+                    android:scheme="life" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".usercenter.UserLoginActivity"    android:screenOrientation="portrait" />
+        <activity
+            android:name=".itemcontent.usercomment.UserCommentActivity"
+            android:theme="@android:style/Theme.NoTitleBar"    android:screenOrientation="portrait" />
+        <activity
+            android:name=".itemcontent.userforward.UserForwardActivity"
+            android:theme="@android:style/Theme.NoTitleBar"    android:screenOrientation="portrait" />
+        <activity
+            android:name=".itemcontent.imageview.ImageViewActivity"
+            android:theme="@android:style/Theme.NoTitleBar"    android:screenOrientation="portrait" />
+        <activity
+            android:name=".itemcontent.imageview.GifImageViewActivity"
+            android:theme="@android:style/Theme.NoTitleBar"    android:screenOrientation="portrait" />
+        <activity  android:name=".path.AboutActivity" android:theme="@android:style/Theme.NoTitleBar"    android:screenOrientation="portrait" />
+         <activity  android:name=".path.FeedbackActivity" android:theme="@android:style/Theme.NoTitleBar"   android:screenOrientation="portrait"  />
+          <activity  android:name=".path.HelpActivity" android:theme="@android:style/Theme.NoTitleBar"   android:screenOrientation="portrait"  >
+
+            </activity>
+           <activity  android:name=".path.SetActivity" android:theme="@android:style/Theme.NoTitleBar"   android:screenOrientation="portrait"  />
+           
+            <activity  android:name=".adview.AppBestActivity" android:theme="@android:style/Theme.NoTitleBar"   android:screenOrientation="portrait" >
+
+            </activity>
+  
+     <!-- add feedback Activity -->   
+  	<activity android:name="com.feedback.ui.SendFeedback" android:windowSoftInputMode="adjustResize" />
+	<activity android:name="com.feedback.ui.FeedbackConversations" />
+	<activity android:name="com.feedback.ui.FeedbackConversation" android:configChanges="keyboard" />
+       
+     <!-- basic anlytic：change the value below to your appkey4d5a0891112cf757e20781d3 ，never change name-->
+     <meta-data android:value="4f54833e5270152bfa0000a4" android:name="UMENG_APPKEY">   </meta-data>  
+     <!-- channel :values is your channel name 4eb7a8135270152e22000015-->
+     <meta-data android:value="androidmarekt" android:name="UMENG_CHANNEL"/>
+        
+    
+     	<!-- AdView SDK for 有米 -->        
+<activity android:name="net.youmi.android.AdActivity" 
+	android:configChanges="keyboard|keyboardHidden|orientation"/>  
+         
+  <!-- AdView SDK for Wooboo --> 
+<meta-data android:value="1" android:name="Market_ID"/> 
+<activity android:name="com.wooboo.adlib_android.AdActivity"  
+ android:configChanges="orientation|keyboardHidden"  
+ android:launchMode="singleTask" />  
+<activity android:name="com.wooboo.adlib_android.FullActivity"  
+ android:configChanges="orientation|keyboardHidden"  
+ android:launchMode="singleTask" /> 
+    
+    </application>
+  
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+ 	<!-- AdView SDK mandatory or important permissions 
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>-->
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
+</manifest>

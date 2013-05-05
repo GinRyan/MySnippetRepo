@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/renren_sdk_pay_repair_bg"
+    android:isScrollContainer="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/renren_sdk_pay_repair_list_bg"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/renren_sdk_pay_repair_logo_image_view"
+            android:layout_width="110dp"
+            android:layout_height="36dp"
+            android:src="@drawable/renren_sdk_pay_repair_logo" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/renren_sdk_pay_repair_overview_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/renren_sdk_pay_repair_overview"
+        />
+
+    <ListView
+        android:id="@+id/renren_sdk_pay_repair_order_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:layout_alignParentLeft="true" >
+    </ListView>
+
+    <Button
+        android:id="@+id/renren_sdk_pay_repair_remove_all_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/renren_sdk_repair_btn_style"
+        android:text="@string/renren_sdk_pay_repair_remove_all"
+        android:textColor="@color/renren_sdk_pay_repair_btn_text" >
+    </Button>
+
+</LinearLayout>

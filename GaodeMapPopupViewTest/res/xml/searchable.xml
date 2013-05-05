@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<searchable xmlns:android="http://schemas.android.com/apk/res/android"
+	android:label="@string/searchLabel" android:hint="@string/searchHint"
+	android:icon="@drawable/menu_route" android:searchSuggestAuthority="com.debby.googlemap.SuggestionProvider"
+	android:queryAfterZeroResults="false" android:searchSuggestSelection=" ? ">
+</searchable>

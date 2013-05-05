@@ -1,0 +1,25 @@
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Light" />
+    <style name="ScrollToFootRefreshListView">
+    	<item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">fill_parent</item>
+    	<item name="android:fadingEdge">none</item>
+    	<item name="android:background">#fff</item>
+    	<item name="android:fadeScrollbars">true</item>
+    	<item name="android:scrollingCache">false</item>
+    	<item name="android:cacheColorHint">#fff</item>
+    </style>
+        <style name="Line">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@drawable/line</item>
+    </style>
+      <style name="userName">
+ 		<item name="android:layout_width">wrap_content</item>
+ 		<item name="android:layout_height">wrap_content</item>
+ 		<item name="android:textColor">#09f</item>
+ 		<item name="android:textSize">14sp</item>
+ 		<item name="android:textStyle">bold</item>
+    </style>
+</resources>

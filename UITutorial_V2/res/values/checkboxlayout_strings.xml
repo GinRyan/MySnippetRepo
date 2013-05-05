@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="checkboxlayout_app_name">CheckBox Demo</string>
+    <string name="checkboxlayout_chk1">Windows</string>
+    <string name="checkboxlayout_chk2">Linux</string>
+    <string name="checkboxlayout_chk3">Unix</string>
+    <string name="checkboxlayout_chk4">Others</string>
+</resources>

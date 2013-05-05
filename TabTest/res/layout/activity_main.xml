@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="#09F">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0" />
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:visibility="gone" />
+
+        <RadioGroup
+            android:id="@+id/main_radio"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radio_button0"
+                style="@style/main_tab_bottom"
+                android:layout_marginTop="2.0dip"
+                android:checked="true"
+                android:drawableTop="@drawable/headphones"
+                android:text="headphones" />
+
+            <RadioButton
+                android:id="@+id/radio_button1"
+                style="@style/main_tab_bottom"
+                android:layout_marginTop="2.0dip"
+                android:drawableTop="@drawable/headset"
+                android:text="headset" />
+
+            <RadioButton
+                android:id="@+id/radio_button2"
+                style="@style/main_tab_bottom"
+                android:layout_marginTop="2.0dip"
+                android:drawableTop="@drawable/keyboard"
+                android:text="keyboard" />
+
+            <RadioButton
+                android:id="@+id/radio_button3"
+                style="@style/main_tab_bottom"
+                android:layout_marginTop="2.0dip"
+                android:drawableTop="@drawable/mouse"
+                android:text="mouse" />
+
+            <RadioButton
+                android:id="@+id/radio_button4"
+                style="@style/main_tab_bottom"
+                android:layout_marginTop="2.0dip"
+                android:drawableTop="@drawable/phone"
+                android:text="phone" />
+        </RadioGroup>
+    </LinearLayout>
+
+</TabHost>

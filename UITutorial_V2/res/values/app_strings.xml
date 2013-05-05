@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, UITutorial_V2Activity!</string>
+    <string name="app_name">UITutorial_V2</string>
+    <color name="frameanimation_lblTextColor">#ff0083</color>
+</resources>

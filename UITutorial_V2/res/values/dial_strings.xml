@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dial_app_name">Dial Demo</string>
+     <string name="dial_button_btnDial">Dial</string>
+     <string name="dial_label_lblPhoneNum">Please Input Phone Number:</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rt"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF"
+        android:gravity="center"
+        android:textColor="#555555"
+        android:textSize="30sp" >
+    </TextView>
+
+</RelativeLayout>

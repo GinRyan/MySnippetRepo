@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="ParserError" severity="ignore" />
+    <issue id="SdCardPath">
+        <ignore path="src\com\example\newcallcamera\MainActivity.java" />
+    </issue>
+</lint>

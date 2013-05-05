@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffffff</color>
+    <color name="yellow">#ffb400</color>
+    <color name="btn">#eeeeee</color>
+    <color name="red">#FF0000</color>
+    <color name="whitewords">#ffffff</color>
+    <color name="blackwords">#000000</color>
+    <color name="tongji">#4d4d4d</color>
+</resources>

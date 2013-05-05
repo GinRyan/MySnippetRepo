@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<TextView android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:text="请选择你喜欢的操作系统：" />
+	<RadioGroup android:id="@+id/radiolayout_radioGroup1"
+	android:padding="10dip"
+		android:layout_width="wrap_content" android:layout_height="wrap_content">
+		<RadioButton android:text="@string/radiolayout_radio1"
+			android:layout_height="wrap_content" android:id="@+id/radiolayout_radio0"
+			android:layout_width="wrap_content" android:checked="true"></RadioButton>
+		<RadioButton android:layout_height="wrap_content"
+			android:text="@string/radiolayout_radio2" android:layout_width="wrap_content"
+			android:id="@+id/radiolayout_radio1"></RadioButton>
+		<RadioButton android:text="@string/radiolayout_radio3"
+			android:layout_height="wrap_content" android:id="@+id/radiolayout_radio2"
+			android:layout_width="wrap_content"></RadioButton>
+		<RadioButton android:text="@string/radiolayout_radio4"
+			android:layout_height="wrap_content" android:id="@+id/radiolayout_radio3"
+			android:layout_width="wrap_content"></RadioButton>
+	</RadioGroup>
+	<RelativeLayout android:layout_width="match_parent"
+	android:id="@+id/radiolayout_relative"
+		android:layout_height="wrap_content">
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/radiolayout_lable_youlikeis"
+			android:layout_alignParentLeft="@id/radiolayout_relative"
+			android:text="你喜欢的操作系统是：" />
+		<TextView android:id="@+id/radiolayout_lable_selectitem"
+			android:layout_toRightOf="@id/radiolayout_lable_youlikeis"
+			android:layout_alignParentRight="@id/radiolayout_relative"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:text="" />
+	</RelativeLayout>
+</LinearLayout>

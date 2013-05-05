@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/item1" android:title="帮助">帮助</item>
+    <item android:id="@+id/item2" android:title="说明">说明</item>
+</menu>

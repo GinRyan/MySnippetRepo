@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, main!</string>
+    <string name="app_name">RunnersHigh</string>
+	<string name="score">tah score</string>
+	<string name="hs_title">High-Score</string>
+	<string name="hs_error_name_empty">Name is empty !</string>
+	<string name="hs_error_no_internet">Please establish an internet connection !</string>
+	<string name="hs_bttn_getonline">Show online highscore</string>
+	<string name="hs_bttn_getlocal">Show local highscore</string>
+	<string name="hs_bttn_pushOnline">Push Online</string>
+	<string name="hs_pushed_online">Score saved online !</string>
+	<string name="hs_already_pushed">Score is already online !</string>
+	<string name="visit_website">Visit our website</string>
+	<string name="hs_loading_local">loading local highscore...</string>
+	<string name="hs_loading_online">loading online highscore...</string>
+	<string name="hs_no_data">no data available</string>
+	<string name="info">runnersHigh was created in 2010 by MultiMediaTechnology and MultiMediaArts students at Salzburg University of Applied Sciences.\n\n- Programming:\nMichael Webersdorfer\nChristian Winkler\nAndre Schweighofer\nFrancois Weber\n\n- Graphics:\nManuel Lehermayr\n\n- Sound:\nAndreas Nagl \n\nVersion 1.0</string>
+</resources>

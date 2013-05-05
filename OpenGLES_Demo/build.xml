@@ -1,0 +1,197 @@
+<?xml version="1.0" ?>
+<project name="AndroidGL" default="package">
+
+	<property environment="env"/>
+	<!-- Provide a System environment variable ANDROID_HOME
+	     or override sdk-folder (e.g. ant -Dsdk-folder=C:\LOCATION_ANDROID_SDK) 
+	-->
+	<!-- sdk-folder must validate to a real location otherwise build will fail -->
+	
+	<property name="sdk-folder" location="${env.ANDROID_HOME}" />
+    <property name="android-tools" location="${sdk-folder}\tools" />
+
+    <!-- The intermediates directory -->
+    <!-- Eclipse uses "bin" for its own output, so we do the same. -->
+    <property name="outdir" value="bin" />
+
+    <!-- No user servicable parts below. -->
+
+    <!-- Input directories -->
+    <property name="resource-dir" value="res" />
+    <property name="asset-dir" value="assets" />
+    <property name="srcdir" value="src" />
+
+    <!-- Output directories -->
+    <property name="outdir-classes" value="${outdir}/classes" />
+
+    <!-- Create R.java in the source directory -->
+    <property name="outdir-r" value="src" />
+
+    <!-- Intermediate files -->
+    <property name="dex-file" value="classes.dex" />
+    <property name="intermediate-dex" value="${outdir}/${dex-file}" />
+
+    <!-- The final package file to generate -->
+    <property name="out-package" value="${outdir}/${ant.project.name}.apk" />
+
+    <!-- Tools -->
+    <property name="aapt" value="${android-tools}/aapt.exe" />
+    <property name="aidl" value="${android-tools}/aidl.exe" />
+    <property name="dx" value="${android-tools}/dx.bat" />
+    <property name="android-jar" value="${sdk-folder}/android.jar" />
+	
+	<path id="cp">
+		<pathelement location="${android-jar}"/>
+
+	</path>
+
+	<!-- Build initialization work -->
+	
+	<target name="init" depends="check-sdk-environment">
+		<description>
+		This target takes care of any build initialization tasks that need to occur.
+		</description>
+	</target>
+	
+	<target name="check-sdk-environment" depends="check-paths"/>
+	
+	<target name="check-paths">
+		<!-- Check if the SDK exists -->
+		<available file="${sdk-folder}" property="sdk-found"/>		
+		<fail unless="sdk-found" 
+			  message="ANDROID SDK not found at [${sdk-folder}] ! Your ANDROID_HOME envrionment variable may not be defined. You can manually define this when calling ANT by using -Dsdk-folder=PATH_TO_ANDROID_SDK"/>
+		<!-- Check if tools exist -->
+		<available file="${android-tools}" property="tools-found"/>		
+		<fail unless="tools-found" 
+  			  message="${android-tools} doesn't exist make sure you have your ANDROID_HOME environment variable set and Android SDK is installed properly."/>
+								
+	</target>
+	
+	
+    <!-- Rules -->
+
+    <!-- Create the output directories if they don't exist yet. -->
+    <target name="dirs">
+        <mkdir dir="${outdir}" />
+        <mkdir dir="${outdir-classes}" />
+    </target>
+
+    <!-- Generate the R.java file for this project's resources. -->
+    <target name="resource-src" depends="init, dirs">
+        <echo>Generating R.java...</echo>
+    	<!-- Remove the past R.java -->
+    	<delete> 
+    		<fileset dir="${outdir-r}" includes="**/R.java"/>    		
+    	</delete>
+        <exec executable="${aapt}" failonerror="true">
+            <arg value="compile" />
+            <arg value="-m" />
+            <arg value="-J" />
+            <arg value="${outdir-r}" />
+            <arg value="-M" />
+            <arg value="AndroidManifest.xml" />
+            <arg value="-S" />
+            <arg value="${resource-dir}" />
+            <arg value="-I" />
+            <arg value="${android-jar}" />
+        </exec>
+    </target>
+
+    <!-- Generate java classes from .aidl files. -->
+    <target name="aidl" depends="init, dirs">
+        <apply executable="${aidl}" failonerror="true">
+            <fileset dir="${srcdir}">
+                <include name="**/*.aidl"/>
+            </fileset>
+        </apply>
+    </target>
+
+    <!-- Compile this project's .java files into .class files. -->
+    <target name="compile" depends="init, dirs, resource-src, aidl">
+        <javac encoding="ascii" target="1.5" debug="true" extdirs=""
+                srcdir="."
+                destdir="${outdir-classes}"
+                bootclasspath="${android-jar}"
+        		classpathref="cp"/>
+    </target>
+
+    <!-- Convert this project's .class files into .dex files. -->
+    <target name="dex" depends="init, compile">
+        <exec executable="${dx}" failonerror="true">
+            <arg value="--dex" />
+            <arg value="--output=${basedir}\${intermediate-dex}" />
+            <arg value="--locals=full" />
+            <arg value="--positions=lines" />
+            <arg path="${basedir}\${outdir-classes}" />
+        </exec>
+    </target>
+
+    <!-- Put the project's resources into the output package file. -->
+    <target name="package-res-and-assets" depends="init">
+        <echo>Packaging resources and assets...</echo>
+        <exec executable="${aapt}" failonerror="true">
+            <arg value="package" />
+            <arg value="-f" />
+            <arg value="-c" />
+            <arg value="-M" />
+            <arg value="AndroidManifest.xml" />
+            <arg value="-S" />
+            <arg value="${resource-dir}" />
+            <arg value="-A" />
+            <arg value="${asset-dir}" />
+            <arg value="-I" />
+            <arg value="${android-jar}" />
+            <arg value="${out-package}" />
+        </exec>
+    </target>
+
+    <!-- Same as package-res-and-assets, but without "-A ${asset-dir}" -->
+    <target name="package-res-no-assets" depends="init">
+        <echo>Packaging resources...</echo>
+        <exec executable="${aapt}" failonerror="true">
+            <arg value="package" />
+            <arg value="-f" />
+            <arg value="-c" />
+            <arg value="-M" />
+            <arg value="AndroidManifest.xml" />
+            <arg value="-S" />
+            <arg value="${resource-dir}" />
+            <!-- No assets directory -->
+            <arg value="-I" />
+            <arg value="${android-jar}" />
+            <arg value="${out-package}" />
+        </exec>
+    </target>
+
+    <!-- Invoke the proper target depending on whether or not
+         an assets directory is present. -->
+    <!-- TODO: find a nicer way to include the "-A ${asset-dir}" argument
+         only when the assets dir exists. -->
+    <target name="package-res">
+        <available file="${asset-dir}" type="dir"
+                property="res-target" value="and-assets" />
+        <property name="res-target" value="no-assets" />
+        <antcall target="package-res-${res-target}" />
+    </target>
+
+    <!-- Put the project's .class files into the output package file. -->
+    <target name="package-java" depends="compile, package-res">
+        <echo>Packaging java...</echo>
+        <jar destfile="${out-package}"
+                basedir="${outdir-classes}"
+                update="true" />
+    </target>
+
+    <!-- Put the project's .dex files into the output package file. -->
+    <target name="package-dex" depends="dex, package-res">
+        <echo>Packaging dex...</echo>
+        <zip destfile="${out-package}.tmp">
+            <zipfileset file="${intermediate-dex}" fullpath="${dex-file}" />
+            <zipfileset src="${out-package}" />
+        </zip>
+    	<move file="${out-package}.tmp" tofile="${out-package}" />
+    </target>
+
+    <!-- Create the package file for this project from the sources. -->
+    <target name="package" depends="init, package-dex" />
+</project>

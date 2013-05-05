@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@+id/frameLayout1"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	 android:paddingLeft="10dip" 
+
+   android:paddingRight="10dip" 
+	
+	android:background="@drawable/layout1_bg" xmlns:android="http://schemas.android.com/apk/res/android">
+	<Button android:text="@string/layout1_button_back" android:id="@+id/layout1_btnBack"
+	android:background="@drawable/layout1_button"
+	android:layout_gravity="left|center_vertical"
+	android:padding="8dip"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+		
+		<TextView android:text="@string/layout1_label_title" android:layout_gravity="center"
+		android:id="@+id/lblTitle"
+		android:textColor="#f333ff"
+		android:textSize="18dip"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"/>
+	<Button android:text="@string/layout1_button_next" android:id="@+id/layout1_btnNext"
+	android:background="@drawable/layout1_button"
+	android:layout_gravity="right|center_vertical"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:padding="8dip"></Button>
+
+
+</FrameLayout>

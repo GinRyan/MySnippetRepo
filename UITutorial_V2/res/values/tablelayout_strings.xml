@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tablelayout_app_name">表格布局</string>
+    <string name="tablelayout_table_col1_title">姓名</string>
+    <string name="tablelayout_table_col2_title">性别</string>
+    <string name="tablelayout_table_col3_title">年龄</string>
+    
+    <string name="tablelayout_table_col1_row1">史文彬</string>
+    <string name="tablelayout_table_col2_row1">男</string>
+    <string name="tablelayout_table_col3_row1">30</string>
+    
+    <string name="tablelayout_table_col1_row2">郑瑜</string>
+    <string name="tablelayout_table_col2_row2">女</string>
+    <string name="tablelayout_table_col3_row2">28</string>
+    
+</resources>

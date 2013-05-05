@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">MuitiPointer</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">多点触控</string>
+
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	android:versionCode="1" android:versionName="1.0"
+	package="org.taptwo.android.widget.viewflow.example">
+	<application android:icon="@drawable/icon" android:label="@string/app_name"
+		android:debuggable="true">
+		<activity android:label="@string/app_name"
+			android:configChanges="orientation" android:name=".CircleViewFlowExample">
+		</activity>
+
+		<activity android:name="TitleViewFlowExample" android:label="@string/app_name"
+			android:configChanges="orientation">
+			
+		</activity>
+		
+		<activity android:name="DiffViewFlowExample" android:label="@string/app_name"
+			android:configChanges="orientation">
+
+		</activity>
+
+		<activity android:label="@string/app_name"
+			android:configChanges="orientation" android:name=".AsyncDataFlowExample">
+		</activity>
+		
+		<activity android:name="ViewFlowExample" android:label="@string/app_name">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"></action>
+				<category android:name="android.intent.category.LAUNCHER"></category>
+			</intent-filter>
+		</activity>
+	</application>
+
+
+</manifest> 

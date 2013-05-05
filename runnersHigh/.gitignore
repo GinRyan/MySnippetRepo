@@ -1,0 +1,9 @@
+*.dex
+*.ap_
+*.apk
+*.class
+R.java
+org.eclipse.jdt.core.prefs
+bin
+gen
+/runnershigh.keystore

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, GoogleMapActivity!</string>
+    <string name="app_name">googlemaptest</string>
+    <string name="searchLabel">搜索地点</string>
+    <string name="searchHint">请输入搜索地点~~</string>
+</resources>

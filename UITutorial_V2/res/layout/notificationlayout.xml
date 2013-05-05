@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+
+	android:layout_height="match_parent">
+	<Button android:text="发送通知" android:id="@+id/notificationlayout_btnSend"
+    style="@style/sharp"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+	<Button android:text="Toast" android:id="@+id/notificationlayout_btnToast"
+		android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		<Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:text="Alert Dialog" android:id="@+id/notificationlayout_btnAlert"></Button>
+</LinearLayout>

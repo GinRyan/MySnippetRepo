@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, ThreadHandlerActivity!</string>
+    <string name="app_name">ThreadHandler</string>
+    <string name="button_name">获取图片</string>
+    <string name="get_pic_failure">获取图片失败</string>
+    <string name="get_pic_success">获取图片成功</string>
+    <string name="thread_started">线程已经启动</string>
+</resources>

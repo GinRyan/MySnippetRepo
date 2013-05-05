@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <LinearLayout 
+	    android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+	    android:layout_height="110dip"
+	    android:gravity="center_vertical">
+	    
+	    	<TextView
+	    		android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+	    		android:text="URL:"
+	    		android:textSize="30sp"
+	    		android:textColor="#FFFF0000"
+	    		android:layout_marginLeft="10dip"
+	    		android:layout_gravity="center_vertical"
+	    		/>
+	    		
+	    	<EditText
+	    		android:id="@+id/url_input"
+	    		android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+	    		android:layout_weight="1"
+	    		android:layout_gravity="center_vertical"
+	    		android:layout_marginLeft="20dip"
+	    		android:layout_marginRight="20dip"
+	    		android:inputType="textUri"
+	    		android:imeOptions="actionGo|flagNoExtractUi"
+	    		/>	
+	    
+		    <ImageButton
+		    	android:id="@+id/cancel"
+		    	android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:layout_marginRight="10dip"
+		    	android:src="@drawable/del"
+		    	android:background="#0000003D"
+		    	android:layout_gravity="center_vertical"
+		    /> 
+    </LinearLayout>
+    <ListView 
+    	android:id="@+id/list"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_gravity="center"
+    	android:gravity="center"
+    	android:cacheColorHint="#330000FF"
+    	android:scrollingCache="false"
+    />
+    
+</LinearLayout>

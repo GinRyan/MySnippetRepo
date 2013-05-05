@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="renren_sdk_edittext_border">#cedef6</color>
+	<color name="renren_sdk_edittext_bg">#ffffff</color>
+	<color name="renren_sdk_title_text">#ffffff</color>
+	<color name="renren_sdk_status_username_text">#000000</color>
+	<color name="renren_sdk_title_border">#000000</color>
+	<color name="renren_sdk_title_bg">#3366ff</color>
+	<color name="renren_sdk_pay_repair_btn_text">#ffffff</color>
+	<color name="renren_sdk_pay_repair_bg">#ffffff</color>
+	<color name="renren_sdk_pay_repair_list_bg">#3366ff</color>
+	<color name="renren_sdk_pay_repair_item_bg">#F1FAFF</color>
+</resources>

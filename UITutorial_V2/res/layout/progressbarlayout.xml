@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<TextView android:text="环形进度条" android:id="@+id/textView1"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+	<ProgressBar android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:id="@+id/progressbarlayout_progressBar1"></ProgressBar>
+	<TextView android:text="水平进度条" android:id="@+id/textView2"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+	<ProgressBar style="?android:attr/progressBarStyleHorizontal"
+		android:layout_width="match_parent" android:layout_height="wrap_content"
+
+		android:max="100" android:id="@+id/progressbarlayout_progressBar2"></ProgressBar>
+	<TextView android:text="TextView" android:id="@+id/progressbarlayout_barstatus"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+	<SeekBar android:layout_height="wrap_content" android:id="@+id/progressbarlayout_seekBar1" android:layout_width="match_parent"></SeekBar>
+
+</LinearLayout>

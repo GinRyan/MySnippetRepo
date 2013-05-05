@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<TextView android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:text="请选择你常用的操作系统：" />
+	<CheckBox android:text="@string/checkboxlayout_chk1" android:id="@+id/checkboxlayout_chk1"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></CheckBox>
+	<CheckBox android:text="@string/checkboxlayout_chk2" android:id="@+id/checkboxlayout_chk2"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></CheckBox>
+	<CheckBox android:text="@string/checkboxlayout_chk3" android:id="@+id/checkboxlayout_chk3"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></CheckBox>
+	<CheckBox android:text="@string/checkboxlayout_chk4" android:id="@+id/checkboxlayout_chk4"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></CheckBox>
+	<LinearLayout android:layout_width="match_parent"
+		android:id="@+id/linearLayout1" android:layout_height="wrap_content">
+		<TextView android:text="你选择的项：" android:id="@+id/textView1"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+		<TextView android:text="" android:id="@+id/checkboxlayout_lbleResult"
+			android:layout_width="match_parent" android:layout_height="wrap_content"></TextView>
+	</LinearLayout>
+	<Button android:text="确定" android:id="@+id/checkboxlayout_btnOk"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+
+</LinearLayout>

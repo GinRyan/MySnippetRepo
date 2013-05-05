@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+    <TextView android:text="@string/dial_label_lblPhoneNum"
+     android:id="@+id/dial_lblPhoneNum" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+    <EditText android:layout_height="wrap_content" android:layout_width="match_parent" 
+    android:id="@+id/dial_txtPhoneNum">
+        <requestFocus></requestFocus>
+    </EditText>
+    <Button android:text="@string/dial_button_btnDial"
+     android:id="@+id/dial_btnDial" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+    
+</LinearLayout>

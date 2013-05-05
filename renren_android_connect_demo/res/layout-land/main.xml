@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_bg"
+    >
+   	 
+   	 <!-- Logo -->
+   	 <ImageView android:layout_width="wrap_content"
+   	 	android:layout_height="wrap_content"
+   	 	android:layout_gravity="center_horizontal"
+   	 	android:paddingTop="8dip"
+   	 	android:layout_marginBottom="8dip"
+   	 	android:src="@drawable/renren_login_logo"/>
+   	    	 
+   	 <!-- auth buttons -->
+   	 <LinearLayout 
+   	 	android:layout_width="fill_parent"
+   	 	android:layout_height="wrap_content"
+   	 	android:layout_gravity="center"
+   	 	android:orientation="vertical"
+   	 	android:paddingLeft="50dip"
+   	 	android:paddingRight="50dip">
+   	 	<TextView 
+   	 		android:layout_width="fill_parent"
+   	 		android:layout_height="wrap_content"
+   	 		android:paddingBottom="5dip"
+   	 		android:gravity="left"
+   	 		android:textColor="@color/login_hint_text"
+   	 		android:text="@string/login_hint"/>
+   	 	<TableLayout android:layout_width="wrap_content"
+   	 		android:layout_height="wrap_content"
+   	 		android:layout_gravity="center"
+   	 		android:stretchColumns="*">
+   	 		<TableRow >
+   	 			<Button 
+   	 				android:id="@+id/auth_site_mode"
+   	 				android:layout_margin="5dip"   	
+   	 				android:layout_width="80dip" 				
+   	 				android:gravity="center"
+   	 				android:background="@drawable/auth_button_bg"
+   	 				android:text="@string/auth_site_mode"/>
+   	 			<Button 
+   	 				android:id="@+id/sso_mode"	
+   	 				android:layout_width="80dip" 	
+   	 				android:layout_margin="5dip"
+   	 				android:gravity="center"
+   	 				android:background="@drawable/auth_button_bg"
+   	 				android:text="@string/sso_mode"/>
+   	 		</TableRow>
+   	 		<TableRow>
+   	 			<Button 
+   	 				android:id="@+id/password_flow_mode"
+   	 				android:layout_margin="5dip"	
+   	 				android:layout_width="80dip" 	
+   	 				android:gravity="center"
+   	 				android:background="@drawable/auth_button_bg"
+   	 				android:text="@string/password_flow_mode"/>
+   	 			<Button 
+   	 				android:id="@+id/renren_demo_upload_photo_without_login"
+   	 				android:layout_margin="5dip"
+   	 				android:gravity="center"	
+   	 				android:layout_width="80dip" 	
+   	 				android:background="@drawable/auth_button_bg"
+   	 				android:text="@string/upload_photo"/>
+   	 		</TableRow>
+   	 	</TableLayout>
+   	 </LinearLayout>
+   	 	
+   	 <!-- footer -->
+   	 <LinearLayout 
+   	 	android:layout_width="fill_parent"
+   	 	android:layout_height="fill_parent">
+   		 <TextView 
+   	 		android:layout_width="fill_parent"
+   	 		android:layout_height="wrap_content"
+   	 		android:layout_gravity="bottom"
+   	 		android:paddingTop="10dip"
+   	 		android:paddingBottom="5dip"
+   	 		android:text="@string/copyright"
+   	 		android:textColor="@color/copyright_info" 
+   	 		android:gravity="center_horizontal"/>
+   	 </LinearLayout>
+</LinearLayout>

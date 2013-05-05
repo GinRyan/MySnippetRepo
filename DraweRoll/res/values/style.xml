@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="mytheme" parent="@android:style/Theme.Light">
+		<item name="android:windowNoTitle"> true </item>
+	</style>
+
+
+	<style name="PopupAnimation" parent="android:Animation">
+		<item name="android:windowEnterAnimation">@anim/ani_in</item>
+		<item name="android:windowExitAnimation">@anim/ani_out</item>
+	</style>
+
+
+</resources>

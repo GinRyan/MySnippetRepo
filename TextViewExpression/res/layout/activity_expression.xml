@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_medium"
+        android:text="@string/hello_world"
+        tools:context=".ExpressionActivity"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="inputhere"
+        android:layout_below="@id/text"
+        android:padding="@dimen/padding_medium"
+        android:text="@string/hello_world"
+        android:textSize="15sp" 
+        tools:context=".ExpressionActivity" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_below="@id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:text="选择表情"/>
+	<Button
+        android:id="@+id/button2"
+        android:layout_below="@id/edit"
+        android:layout_toRightOf="@id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:text="显示实际文字"/>
+	
+</RelativeLayout>

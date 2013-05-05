@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, ProSec!</string>
+    <string name="app_name">ProSec</string>
+	<string name="select">选择/拍摄</string>
+	<string name="fromSD">从手机中选择</string>
+	<string name="fromCamera">拍照获得</string>
+	<string name="capture">拍照</string>
+	
+</resources>

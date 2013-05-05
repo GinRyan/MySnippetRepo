@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="spinnerlayout_app_name">Spinner Demo</string>
+    <string name="spinnerlayout_spinner_prompt">请选择喜欢的颜色</string>
+</resources>

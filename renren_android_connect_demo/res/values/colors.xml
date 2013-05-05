@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="main_bg">#c5ccd4</color>
+	<color name="main_title_text">#ffffff</color>
+	
+	<color name="login_hint_text">#666666</color>
+	
+	<color name="copyright_info">#47576f</color>
+	
+    <color name="api_group_title_text">#ffffff</color>
+    <color name="api_group_bottom_border">#666666</color>
+    
+    <color name="api_list_bg">#ffffff</color>
+    <color name="api_item_label">#000000</color>
+    <color name="api_item_name">#47576f</color>
+    <color name="api_item_bg">#bec9d7</color>
+    <color name="status_publish_text_bg">#ffffff</color>
+    <color name="status_hint_text">#47576f</color>
+	<color name="log_title_text">#ffffff</color>
+	<color name="log_content_bg">#ffffff</color>
+	<color name="pay_text">#333333</color>
+</resources>

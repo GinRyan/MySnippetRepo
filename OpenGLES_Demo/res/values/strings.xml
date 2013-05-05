@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AndroidGL</string>
+    <string name="first">First Tutorial : Black Screen</string>
+    <string name="second">Second Tutorial : Geom</string>
+    <string name="third">Third Tutorial : Colors</string>
+    <string name="fourth">Fourth Tutorial : Multiples</string>
+    <string name="fifth">Fifth Tutorial : Depth</string>
+    <string name="sixth">Sixth Tutorial : Cube</string>
+    <string name="seventh">Seventh Tutorial : Lighting</string>
+    <string name="eighth">Eighth Tutorial : Textures</string>
+    <string name="ninth">Ninth Tutorial : Blending</string>
+    <string name="tenth">Tenth Tutorial : Fog</string>
+    <string name="eleventh">Eleventh Tutorial : Reflection</string>
+<string name="twelfth">Twelfth Tutorial : MultiTexture</string>
+<string name="thirteenth">Thirteenth Tutorial : Fonts</string>
+<string name="fourteenth">Fourteenth Tutorial : Sphere</string>
+</resources>

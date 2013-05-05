@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:padding="10dip">
+
+	<Button android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="@string/run"
+		android:id="@+id/run" />
+	<TextView android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="返回结果"
+		android:textSize="16sp" android:textColor="#333333" />
+	<EditText android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:textColor="#000000"
+		android:gravity="top" android:editable="false" android:padding="5dip"
+		android:textSize="14sp" android:scrollbars="vertical" android:id="@+id/log" />
+</LinearLayout>

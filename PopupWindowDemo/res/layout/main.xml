@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	android:id="@+id/rl_root"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+>
+	<Button
+		android:id="@+id/btn1"
+		android:text="以自己作为Anchor,Drawdown风格"
+		android:onClick="btn1$Click"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
+
+	<Button
+		android:id="@+id/btn2"
+		android:text="以自己为Anchor,偏移50,-5"
+		android:onClick="btn2$Click"
+		android:layout_below="@id/btn1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
+	<Button
+		android:id="@+id/btn3"
+		android:text="以屏幕正中为参照,不偏移"
+		android:onClick="btn3$Click"
+		android:layout_below="@id/btn2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
+	<Button
+		android:id="@+id/btn5"
+		android:text="以屏幕左上为参照,偏移20,20(算状态栏)"
+		android:onClick="btn5$Click"
+		android:layout_below="@id/btn3"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
+	<Button
+		android:id="@+id/btn6"
+		android:text="出現在Button5的上方,居中"
+		android:onClick="btn6$Click"
+		android:layout_below="@id/btn5"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
+		
+	<Button
+		android:id="@+id/btn4"
+		android:text="关闭"
+		android:onClick="btn4$Click"
+		android:layout_centerInParent="true"
+		android:layout_alignParentBottom="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
+
+	
+</RelativeLayout>

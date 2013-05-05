@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/renren_sdk_pay_repair_btn_down" android:state_pressed="true"/>
+    <item android:drawable="@drawable/renren_sdk_pay_repair_btn" android:state_focused="true"/>
+    <item android:drawable="@drawable/renren_sdk_pay_repair_btn"/>
+
+</selector>

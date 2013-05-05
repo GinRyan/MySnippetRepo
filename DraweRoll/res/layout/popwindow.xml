@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout 
+ 		xmlns:android="http://schemas.android.com/apk/res/android"
+ 		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:orientation="horizontal"
+		android:id="@+id/layout_main"
+		>
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:gravity="center_horizontal"
+			android:clickable="true"
+			android:background="@drawable/state_btn_pressed"
+			android:layout_weight="1"
+			android:id="@+id/btn_0"
+			>
+			<ImageView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:scaleType="fitCenter"
+				android:src="@drawable/ic_call"
+				>
+			</ImageView>
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:textColor="#000000"
+				android:textSize="18px"
+				android:text="电话">
+			</TextView>
+		</LinearLayout>
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:gravity="center_horizontal"
+			android:clickable="true"
+			android:background="@drawable/state_btn_pressed"
+			android:layout_weight="1"
+			android:id="@+id/btn_1"
+			>
+			<ImageView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:scaleType="fitCenter"
+				android:src="@drawable/ic_home"
+				>
+			</ImageView>
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:textColor="#000"
+				android:textSize="18px"
+				android:text="空间">
+			</TextView>
+		</LinearLayout>
+		
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:gravity="center_horizontal"
+			android:clickable="true"
+			android:background="@drawable/state_btn_pressed"
+			android:layout_weight="1"
+			android:id="@+id/btn_2"
+			>
+			<ImageView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:scaleType="fitCenter"
+				android:src="@drawable/ic_sms"
+				>
+			</ImageView>
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:textColor="#000"
+				android:textSize="18px"
+				android:text="短信"
+				>
+			</TextView>
+		</LinearLayout>
+</LinearLayout>

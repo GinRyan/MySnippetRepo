@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/cameraUse"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+>
+
+
+
+<Button android:id="@+id/btn_cature"
+android:layout_width="100px"
+android:layout_height="100px"
+android:text="@string/capture"
+android:layout_gravity="right"
+
+></Button>
+
+   	<SurfaceView android:id="@+id/surfaceview4cam"
+	android:layout_width="320px"
+	android:layout_height="240px"	
+	android:layout_gravity="center"
+></SurfaceView>
+
+</LinearLayout>
