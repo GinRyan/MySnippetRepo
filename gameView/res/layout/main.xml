@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/screen"
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="fill_parent" android:layout_height="fill_parent"
+        android:orientation="vertical">
+        <ImageView
+         android:src="@drawable/jay"
+         android:layout_width="fill_parent" 
+         android:layout_height="fill_parent"
+        />
+        <Button android:id="@+id/button0"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:text="绘制字符串"/>
+        <Button android:id="@+id/button1"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:text="绘制无规则几何图形等"/>
+        <Button android:id="@+id/button2"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:text="图片旋转缩放的绘制"/>
+        <Button android:id="@+id/button3"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:text="播放frame动画"/>
+    </LinearLayout>
+</ScrollView>

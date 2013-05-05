@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, UIActivity!</string>
+    <string name="app_name">UIApp</string>
+    <string name="string_font">从string.xml读取字符串绘制</string>
+</resources>
