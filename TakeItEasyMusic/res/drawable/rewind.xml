@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item        
+                    android:state_pressed="false"
+                       android:drawable="@drawable/rewind_n" />
+    <item        
+                    android:state_pressed="true"
+                       android:drawable="@drawable/rewind_p" />
+    <item        
+                    android:state_focused="true"
+                       android:drawable="@drawable/rewind_p" />
+    <item        
+                       android:drawable="@drawable/rewind_n" />
+</selector>
