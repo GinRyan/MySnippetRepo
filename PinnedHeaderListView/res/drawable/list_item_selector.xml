@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:drawable="@color/selector_background"/>
+    <item android:state_selected="true" android:drawable="@color/selector_background"/>
+    <item android:drawable="@color/item_background"/>
+    
+</selector>
+
+<!-- <?xml version="1.0" encoding="utf-8" ?> 
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:state_selected="true" 
+        android:color="@color/selector_background" /> 
+  <item android:state_focused="true" 
+        android:color="@color/selector_background" />
+  <item android:state_pressed="true" android:color="@color/selector_background" />
+  <item android:color="@color/item_background"/>
+</selector> -->
+<!-- <?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true"
+          android:color="#ffff0000"/> pressed
+    <item android:state_focused="true"
+          android:color="#ff0000ff"/> focused
+    <item android:color="#ff000000"/> default
+</selector> -->
+
+
+
+
+
+
+

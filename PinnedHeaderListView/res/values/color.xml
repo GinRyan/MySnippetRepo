@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="item_background">#D0D0D0</color>
+    <color name="title_background">#300000</color>
+    <color name="content_background">#D0D0D0</color>
+    <color name="content_color">#000000</color>
+    <color name="selector_background">#DAA520</color>
+</resources>
