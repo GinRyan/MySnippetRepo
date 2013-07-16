@@ -1,4 +1,3 @@
-
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -14,7 +13,9 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.BitmapFactory.Options;
+import android.graphics.Matrix;
 import android.graphics.Rect;
+import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -23,6 +24,9 @@ import android.provider.MediaStore;
 /**
  * 
  * 拾取系统照片和相机捕获
+ * 
+ * 修复：拍照返回方向90和270度错误
+ * 修复：未重现800w像素拍照返回时OOM问题
  * 
  * @author Liang
  * 
@@ -59,7 +63,7 @@ public class PickImageWithCropHelper {
 	}
 
 	/**
-	 * 弹出对话框
+	 * 弹出对话框，询问拾取图片方式
 	 */
 	public void createDialog() {
 		String[] items = { "拍照", "相册选取" };
@@ -124,23 +128,61 @@ public class PickImageWithCropHelper {
 				return mBitmapResult;
 			}
 		} else if (resultCode == Activity.RESULT_OK && requestCode == CODE_CAPTURE) {// 照相获取[系统相机已经写入到文件中]
-			//
 			mBitmapResult = BitmapHandler.startDecodeBitmapByPath(mCurrentFilePath.getAbsolutePath(), 800, 600);
-			BitmapHandler.writeToFile(mCurrentFilePath, BitmapHandler.bitmapToBytes(mBitmapResult));
+			ExifInterface exifin = new ExifInterface(mCurrentFilePath.getAbsolutePath());
+
+			// 屏幕旋转
+			Matrix matrix = new Matrix();
+
+			int rotateDegree = 0;
+			int factDeg = exifin.getAttributeInt(ExifInterface.TAG_ORIENTATION, -1);
+			switch (factDeg) {
+			case ExifInterface.ORIENTATION_ROTATE_90:
+				Logger.e(this, "要旋转90度。");
+				rotateDegree = 90;
+				break;
+			case ExifInterface.ORIENTATION_ROTATE_180:
+				Logger.e(this, "要旋转180度。");
+				rotateDegree = 180;
+				break;
+			case ExifInterface.ORIENTATION_ROTATE_270:
+				Logger.e(this, "要旋转270度。");
+				rotateDegree = 270;
+				break;
+			default:
+				Logger.e(this, "不旋转");
+				break;
+			}
+			Bitmap rotatedBitmap = null;
+			if (rotateDegree != 0) {
+				matrix.setRotate(rotateDegree);
+				rotatedBitmap = Bitmap.createBitmap(mBitmapResult, 0, 0, mBitmapResult.getWidth(), mBitmapResult.getHeight(), matrix, true);
+			}
+
+			BitmapHandler.writeToFile(mCurrentFilePath, BitmapHandler.bitmapToBytes(rotatedBitmap));
 			if (allowCrop) {
 				startPhotoZoom(Uri.fromFile(mCurrentFilePath));
 			}
-			return mBitmapResult;
+			return rotatedBitmap;
 		} else if (resultCode == Activity.RESULT_OK && requestCode == CODE_PHOTO_CROP) {
 			getCropBitmap(data);
 		}
 		return mBitmapResult;
 	}
 
+	public void finish() {
+
+		if (mBitmapResult != null && !mBitmapResult.isRecycled()) {
+			mBitmapResult.recycle();
+			mBitmapResult = null;
+		}
+	}
+
 	/**
 	 * 获取已经裁剪的位图
 	 * 
-	 * @param data 获取数据
+	 * @param data
+	 *            获取数据
 	 * @throws IOException
 	 */
 	public static void getCropBitmap(Intent data) throws IOException {
@@ -241,8 +283,8 @@ public class PickImageWithCropHelper {
 				return null;
 			}
 			final ByteArrayOutputStream os = new ByteArrayOutputStream();
-			// 将Bitmap压缩成JPG编码，质量为95%存储
-			bitmap.compress(Bitmap.CompressFormat.JPEG, 95, os);// 除了PNG还有很多常见格式，如jpeg等。
+			// 将Bitmap压缩成JPG编码，质量为75%存储
+			bitmap.compress(Bitmap.CompressFormat.JPEG, 75, os);// 除了PNG还有很多常见格式，如jpeg等。
 			return os.toByteArray();
 		}
 
