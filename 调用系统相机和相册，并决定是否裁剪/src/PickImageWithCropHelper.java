@@ -1,9 +1,13 @@
+import java.io.BufferedOutputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.ref.WeakReference;
+
+import org.apache.http.impl.conn.Wire;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -25,8 +29,7 @@ import android.provider.MediaStore;
  * 
  * 拾取系统照片和相机捕获
  * 
- * 修复：拍照返回方向90和270度错误
- * 修复：未重现800w像素拍照返回时OOM问题
+ * 修复：拍照返回方向90和270度错误 修复：未重现800w像素拍照返回时OOM问题
  * 
  * @author Liang
  * 
@@ -41,8 +44,10 @@ public class PickImageWithCropHelper {
 	public static final int CODE_CAPTURE = 100;// 拍摄照片
 	public static final int CODE_PHOTO_CROP = 111;// 照片剪裁
 	public static Bitmap mBitmapResult;// 获取到的位图对象
-
 	public boolean allowCrop = false;// 允许裁剪
+
+	OnFinishCropping ofc;
+	OnFinishPicking ofp;
 
 	/**
 	 * 选择相册图片还是拍摄照片。
@@ -57,9 +62,26 @@ public class PickImageWithCropHelper {
 			this.context = context;
 			this.allowCrop = allowCrop;
 			dialog = new AlertDialog.Builder(context);
+
 		} else {
 			throw new NullPointerException("必须传入有效Activity");
 		}
+	}
+
+	public interface OnFinishCropping {
+		public void onFinish();
+	}
+
+	public interface OnFinishPicking {
+		public void onFinish();
+	}
+
+	public void setOnFinishCropping(OnFinishCropping ofc) {
+		this.ofc = ofc;
+	}
+
+	public void setOnFinishPicking(OnFinishPicking ofp) {
+		this.ofp = ofp;
 	}
 
 	/**
@@ -73,15 +95,10 @@ public class PickImageWithCropHelper {
 			public void onClick(DialogInterface dialog, int which) {
 				switch (which) {
 				case 0:// 照相获取
-					Intent takephoto = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-					takephoto.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(mCurrentFilePath));
-					context.startActivityForResult(takephoto, CODE_CAPTURE);
+					pickCapture();
 					break;
 				case 1:// 从相册获取
-					Intent album = new Intent(Intent.ACTION_GET_CONTENT);
-					album.setType("image/*");
-					context.startActivityForResult(album, CODE_PICK_IMAGE);
-					context.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+					pickAlbum();
 					break;
 				}
 			}
@@ -98,6 +115,25 @@ public class PickImageWithCropHelper {
 	}
 
 	/**
+	 * 照相获取
+	 */
+	public void pickCapture() {
+		Intent takephoto = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+		takephoto.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(mCurrentFilePath));
+		context.startActivityForResult(takephoto, CODE_CAPTURE);
+	}
+
+	/**
+	 * 从相册获取
+	 */
+	public void pickAlbum() {
+		Intent album = new Intent(Intent.ACTION_GET_CONTENT);
+		album.setType("image/*");
+		context.startActivityForResult(album, CODE_PICK_IMAGE);
+		context.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+	}
+
+	/**
 	 * 取回位图数据并处理，这里需要放在onActivityResult()回调方法中
 	 * 
 	 * @param requestCode
@@ -109,72 +145,106 @@ public class PickImageWithCropHelper {
 	 * @throws IOException
 	 * @throws FileNotFoundException
 	 */
-	public Bitmap bitmapHandler(int requestCode, int resultCode, Intent data) throws FileNotFoundException, IOException {
-		ContentResolver resolver = context.getContentResolver();
+	public void bitmapHandler(int requestCode, int resultCode, final Intent data) {
+		final ContentResolver resolver = context.getContentResolver();
 		if (resultCode != Activity.RESULT_OK) {// 返回结果不为OK
-			return null;
+			return;
 		} else if (resultCode == Activity.RESULT_OK && requestCode == CODE_PICK_IMAGE) {// 获取相册照片返回结果为OK时
 			Uri uri = data.getData();
-			if (uri != null) {
-				mBitmapResult = MediaStore.Images.Media.getBitmap(resolver, uri);
-				// 处理缩小图片，需要写图片压缩器
-				BitmapHandler.writeToFile(mCurrentFilePath, BitmapHandler.bitmapToBytes(mBitmapResult));
-				mBitmapResult.recycle();
-				mBitmapResult = BitmapHandler.startDecodeBitmapByPath(mCurrentFilePath.getAbsolutePath(), 800, 600);
-				BitmapHandler.writeToFile(mCurrentFilePath, BitmapHandler.bitmapToBytes(mBitmapResult));
-				if (allowCrop) {
-					startPhotoZoom(uri);
+			try {
+				if (uri != null) {
+					mBitmapResult = MediaStore.Images.Media.getBitmap(resolver, uri);
+
+					// 处理缩小图片，需要写图片压缩器
+					writeToFile(mCurrentFilePath, mBitmapResult);
+
+					mBitmapResult.recycle();
+					mBitmapResult = BitmapHandler.startDecodeBitmapByPath(mCurrentFilePath.getAbsolutePath(), 800, 600);
+
+					writeToFile(mCurrentFilePath, mBitmapResult);
+					mBitmapResult.recycle();
+
+					if (allowCrop) {
+						startPhotoZoom(uri);
+					}
+					if (ofp != null && !allowCrop) {
+						ofp.onFinish();
+					}
 				}
-				return mBitmapResult;
-			}
-		} else if (resultCode == Activity.RESULT_OK && requestCode == CODE_CAPTURE) {// 照相获取[系统相机已经写入到文件中]
-			mBitmapResult = BitmapHandler.startDecodeBitmapByPath(mCurrentFilePath.getAbsolutePath(), 800, 600);
-			ExifInterface exifin = new ExifInterface(mCurrentFilePath.getAbsolutePath());
-
-			// 屏幕旋转
-			Matrix matrix = new Matrix();
-
-			int rotateDegree = 0;
-			int factDeg = exifin.getAttributeInt(ExifInterface.TAG_ORIENTATION, -1);
-			switch (factDeg) {
-			case ExifInterface.ORIENTATION_ROTATE_90:
-				Logger.e(this, "要旋转90度。");
-				rotateDegree = 90;
-				break;
-			case ExifInterface.ORIENTATION_ROTATE_180:
-				Logger.e(this, "要旋转180度。");
-				rotateDegree = 180;
-				break;
-			case ExifInterface.ORIENTATION_ROTATE_270:
-				Logger.e(this, "要旋转270度。");
-				rotateDegree = 270;
-				break;
-			default:
-				Logger.e(this, "不旋转");
-				break;
-			}
-			Bitmap rotatedBitmap = null;
-			if (rotateDegree != 0) {
-				matrix.setRotate(rotateDegree);
-				rotatedBitmap = Bitmap.createBitmap(mBitmapResult, 0, 0, mBitmapResult.getWidth(), mBitmapResult.getHeight(), matrix, true);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			} catch (Exception e) {
+				e.printStackTrace();
+			} catch (Error e) {
+				e.printStackTrace();
 			}
 
-			BitmapHandler.writeToFile(mCurrentFilePath, BitmapHandler.bitmapToBytes(rotatedBitmap));
-			if (allowCrop) {
-				startPhotoZoom(Uri.fromFile(mCurrentFilePath));
+		} else if (resultCode == Activity.RESULT_OK && requestCode == CODE_CAPTURE) {// 照相获取[系统相机已经自动写入到文件中]
+			mBitmapResult = BitmapHandler.startDecodeBitmapByPath(mCurrentFilePath.getAbsolutePath(), 800, 600);// 从文件中读取
+			ExifInterface exifin = null;
+			try {
+				exifin = new ExifInterface(mCurrentFilePath.getAbsolutePath());
+
+				// 屏幕旋转
+				Matrix matrix = new Matrix();
+
+				int rotateDegree = 0;
+				int factDeg = exifin.getAttributeInt(ExifInterface.TAG_ORIENTATION, -1);
+				switch (factDeg) {
+				case ExifInterface.ORIENTATION_ROTATE_90:
+					Logger.e(this, "要旋转90度。");
+					rotateDegree = 90;
+					break;
+				case ExifInterface.ORIENTATION_ROTATE_180:
+					Logger.e(this, "要旋转180度。");
+					rotateDegree = 180;
+					break;
+				case ExifInterface.ORIENTATION_ROTATE_270:
+					Logger.e(this, "要旋转270度。");
+					rotateDegree = 270;
+					break;
+				default:
+					Logger.e(this, "不旋转");
+					break;
+				}
+
+				/**
+				 * TODO 会OOM 获得到的Bitmap对象
+				 */
+				Bitmap rotatedBitmap = null;
+				if (rotateDegree != 0) {
+					matrix.setRotate(rotateDegree);
+					rotatedBitmap = Bitmap.createBitmap(mBitmapResult, 0, 0, mBitmapResult.getWidth() / 2, mBitmapResult.getHeight() / 2, matrix, true);
+					writeToFile(mCurrentFilePath, rotatedBitmap);
+					rotatedBitmap.recycle();
+				}
+
+				mBitmapResult.recycle();
+				System.gc();
+				System.runFinalization();
+				if (allowCrop) {
+					startPhotoZoom(Uri.fromFile(mCurrentFilePath));
+				}
+				if (ofp != null && !allowCrop) {
+					ofp.onFinish();
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
 			}
-			return rotatedBitmap;
+
 		} else if (resultCode == Activity.RESULT_OK && requestCode == CODE_PHOTO_CROP) {
-			getCropBitmap(data);
-		}
-		return mBitmapResult;
-	}
 
-	public void finish() {
+			try {
+				getCropBitmap(data);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			if (ofc != null) {
+				ofc.onFinish();
+			}
 
-		if (mBitmapResult != null && !mBitmapResult.isRecycled()) {
-			mBitmapResult.recycle();
-			mBitmapResult = null;
 		}
 	}
 
@@ -189,18 +259,13 @@ public class PickImageWithCropHelper {
 		// 裁剪
 		Bundle extras = data.getExtras();
 		if (extras != null) {
-			Bitmap photo = extras.getParcelable("data");
+			mBitmapResult = extras.getParcelable("data");
 			ByteArrayOutputStream stream = new ByteArrayOutputStream();
-			photo.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+			mBitmapResult.compress(Bitmap.CompressFormat.JPEG, 100, stream);
 			// (0 - 100)压缩文件
 			// imageView.setImageBitmap(photo);
-			mBitmapResult = photo;
-			byte[] bmArrbyte;
-			bmArrbyte = BitmapHandler.bitmapToBytes(mBitmapResult);
-			FileOutputStream outputStream = new FileOutputStream(mCropedFilePath);
-			outputStream.write(bmArrbyte);
-			outputStream.flush();
-			outputStream.close();
+			writeToFile(mCropedFilePath, mBitmapResult);
+			mBitmapResult.recycle();
 		}
 	}
 
@@ -240,6 +305,8 @@ public class PickImageWithCropHelper {
 			opts.inSampleSize = calculateInSampleSize(opts, finalWidth, finalHeight);
 			// 用 inSampleSize 设置解码位图对象
 			opts.inJustDecodeBounds = false;
+			opts.inInputShareable = true;
+			opts.inPurgeable = true;
 			return BitmapFactory.decodeFile(pathName, opts);
 		}
 
@@ -251,6 +318,8 @@ public class PickImageWithCropHelper {
 			opts.inSampleSize = calculateInSampleSize(opts, finalWidth, finalHeight);
 			// 用 inSampleSize 设置解码位图对象
 			opts.inJustDecodeBounds = false;
+			opts.inInputShareable = true;
+			opts.inPurgeable = true;
 			return BitmapFactory.decodeStream(is, rect, opts);
 		}
 
@@ -271,35 +340,30 @@ public class PickImageWithCropHelper {
 			return inSampleSize;
 		}
 
-		/**
-		 * 用于上传图片之前，将图片转换为字节流
-		 * 
-		 * @param bitmap
-		 *            图片
-		 * @return 转换的字节流对象
-		 */
-		public static byte[] bitmapToBytes(Bitmap bitmap) {
-			if (bitmap == null) {
-				return null;
-			}
-			final ByteArrayOutputStream os = new ByteArrayOutputStream();
-			// 将Bitmap压缩成JPG编码，质量为75%存储
-			bitmap.compress(Bitmap.CompressFormat.JPEG, 75, os);// 除了PNG还有很多常见格式，如jpeg等。
-			return os.toByteArray();
-		}
+	}
 
-		/**
-		 * 把bytes一次性写入file并关闭
-		 * 
-		 * @param file
-		 * @param bytes
-		 * @throws IOException
-		 */
-		public static void writeToFile(File file, byte[] bytes) throws IOException {
+	/**
+	 * 把bytes一次性写入file并关闭
+	 * 
+	 * @param file
+	 * @param bytes
+	 * @throws IOException
+	 */
+	public static void writeToFile(final File file, final Bitmap bitmap) {
+		if (bitmap == null) {
+			return;
+		}
+		try {
+			// 将Bitmap压缩成JPG编码，质量为88%存储
 			FileOutputStream fos = new FileOutputStream(file);
-			fos.write(bytes);
+			bitmap.compress(Bitmap.CompressFormat.PNG, 88, fos);// 除了PNG还有很多常见格式，如jpeg等。
 			fos.flush();
 			fos.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
+
 	}
 }
