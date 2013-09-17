@@ -1,13 +1,10 @@
-import java.io.BufferedOutputStream;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.ref.WeakReference;
-
-import org.apache.http.impl.conn.Wire;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -159,7 +156,7 @@ public class PickImageWithCropHelper {
 					writeToFile(mCurrentFilePath, mBitmapResult);
 
 					mBitmapResult.recycle();
-					mBitmapResult = BitmapHandler.startDecodeBitmapByPath(mCurrentFilePath.getAbsolutePath(), 800, 600);
+					mBitmapResult = BitmapHandler.startDecodeBitmapByPath(mCurrentFilePath.getAbsolutePath(), 1024, 768);
 
 					writeToFile(mCurrentFilePath, mBitmapResult);
 					mBitmapResult.recycle();
@@ -182,7 +179,7 @@ public class PickImageWithCropHelper {
 			}
 
 		} else if (resultCode == Activity.RESULT_OK && requestCode == CODE_CAPTURE) {// 照相获取[系统相机已经自动写入到文件中]
-			mBitmapResult = BitmapHandler.startDecodeBitmapByPath(mCurrentFilePath.getAbsolutePath(), 800, 600);// 从文件中读取
+			mBitmapResult = BitmapHandler.startDecodeBitmapByPath(mCurrentFilePath.getAbsolutePath(), 1024, 768);// 从文件中读取
 			ExifInterface exifin = null;
 			try {
 				exifin = new ExifInterface(mCurrentFilePath.getAbsolutePath());
@@ -211,15 +208,17 @@ public class PickImageWithCropHelper {
 				}
 
 				/**
-				 * TODO 会OOM 获得到的Bitmap对象
+				 * 获得到的Bitmap对象
 				 */
 				Bitmap rotatedBitmap = null;
 				if (rotateDegree != 0) {
 					matrix.setRotate(rotateDegree);
-					rotatedBitmap = Bitmap.createBitmap(mBitmapResult, 0, 0, mBitmapResult.getWidth() / 2, mBitmapResult.getHeight() / 2, matrix, true);
-					writeToFile(mCurrentFilePath, rotatedBitmap);
-					rotatedBitmap.recycle();
+
 				}
+				rotatedBitmap = Bitmap.createBitmap(mBitmapResult, 0, 0, mBitmapResult.getWidth(), mBitmapResult.getHeight(), matrix, true);
+
+				writeToFile(mCurrentFilePath, rotatedBitmap);
+				rotatedBitmap.recycle();
 
 				mBitmapResult.recycle();
 				System.gc();
