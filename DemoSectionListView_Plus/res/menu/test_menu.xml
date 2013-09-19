@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/standard_list"
-          android:title="@string/standard_list" />
-    <item android:id="@+id/empty_list"
-          android:title="@string/empty_list" />
-</menu>

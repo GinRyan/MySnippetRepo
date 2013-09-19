@@ -1,8 +1,0 @@
-<resources>
-
-    <string name="app_name">MapDemo1</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="menu_settings">Settings</string>
-    <string name="title_activity_map_demo1">MapDemo1</string>
-
-</resources>
