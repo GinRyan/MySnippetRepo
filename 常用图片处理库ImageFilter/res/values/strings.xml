@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, ImageActivity!</string>
+    <string name="app_name">Image</string>
+    <string name="running_face_detection">请稍等</string>
+    <string name="multiface_crop_help">&quot;轻点一张脸开始裁剪。&quot;</string>
+    <string name="cancel">取消</string>
+    <string name="crop">裁剪</string>
+    <string name="save">保存</string>
+    <string name="choose_img">选择图片</string>
+
+</resources>
