@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Sync</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+	<string name="provider_authorities">org.ginryan.ilike</string>
+	<string name="com_ginryan_mycast">com.ginryan.mycast</string>
+</resources>
