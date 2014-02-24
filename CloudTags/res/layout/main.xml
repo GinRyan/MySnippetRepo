@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" >
+    <RelativeLayout android:id="@+id/bt_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" >
+    	<Button android:id="@+id/in" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="In" android:layout_alignParentLeft="true" />
+    	<Button android:id="@+id/out" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Out" android:layout_alignParentRight="true" />
+    </RelativeLayout>>    
+    <com.js.cloudtags.KeywordsFlow android:id="@+id/keywordsflow" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/bt_layout" />
+</RelativeLayout>
