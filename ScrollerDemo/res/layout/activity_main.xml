@@ -1,0 +1,10 @@
+<com.ipjmc.scroller.CustomView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/custom_view"
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+    android:orientation="vertical" android:background="#fff">
+
+	<TextView android:text="下拉" android:textSize="32sp"
+	    android:layout_width="fill_parent" android:layout_height="fill_parent"
+	    android:gravity="center_horizontal" android:background="#aaa"/>
+</com.ipjmc.scroller.CustomView>
